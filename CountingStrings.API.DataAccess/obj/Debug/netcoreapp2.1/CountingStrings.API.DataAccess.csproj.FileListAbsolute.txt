@@ -1,0 +1,9 @@
+D:\CountingStrings\CountingStrings\CountingStrings.API.DataAccess\bin\Debug\netcoreapp2.1\CountingStrings.API.DataAccess.deps.json
+D:\CountingStrings\CountingStrings\CountingStrings.API.DataAccess\bin\Debug\netcoreapp2.1\CountingStrings.API.DataAccess.dll
+D:\CountingStrings\CountingStrings\CountingStrings.API.DataAccess\bin\Debug\netcoreapp2.1\CountingStrings.API.DataAccess.pdb
+D:\CountingStrings\CountingStrings\CountingStrings.API.DataAccess\obj\Debug\netcoreapp2.1\CountingStrings.API.DataAccess.csproj.CoreCompileInputs.cache
+D:\CountingStrings\CountingStrings\CountingStrings.API.DataAccess\obj\Debug\netcoreapp2.1\CountingStrings.API.DataAccess.AssemblyInfoInputs.cache
+D:\CountingStrings\CountingStrings\CountingStrings.API.DataAccess\obj\Debug\netcoreapp2.1\CountingStrings.API.DataAccess.AssemblyInfo.cs
+D:\CountingStrings\CountingStrings\CountingStrings.API.DataAccess\obj\Debug\netcoreapp2.1\CountingStrings.API.DataAccess.dll
+D:\CountingStrings\CountingStrings\CountingStrings.API.DataAccess\obj\Debug\netcoreapp2.1\CountingStrings.API.DataAccess.pdb
+D:\CountingStrings\CountingStrings\CountingStrings.API.DataAccess\obj\Debug\netcoreapp2.1\CountingStrings.API.DataAccess.csprojAssemblyReference.cache

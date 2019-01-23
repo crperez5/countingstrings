@@ -1,0 +1,14 @@
+D:\CountingStrings\CountingStrings\CountingStrings.Service\bin\Debug\netcoreapp2.1\CountingStrings.Service.deps.json
+D:\CountingStrings\CountingStrings\CountingStrings.Service\bin\Debug\netcoreapp2.1\CountingStrings.Service.runtimeconfig.json
+D:\CountingStrings\CountingStrings\CountingStrings.Service\bin\Debug\netcoreapp2.1\CountingStrings.Service.runtimeconfig.dev.json
+D:\CountingStrings\CountingStrings\CountingStrings.Service\bin\Debug\netcoreapp2.1\CountingStrings.Service.dll
+D:\CountingStrings\CountingStrings\CountingStrings.Service\obj\Debug\netcoreapp2.1\CountingStrings.Service.csprojAssemblyReference.cache
+D:\CountingStrings\CountingStrings\CountingStrings.Service\obj\Debug\netcoreapp2.1\CountingStrings.Service.csproj.CoreCompileInputs.cache
+D:\CountingStrings\CountingStrings\CountingStrings.Service\obj\Debug\netcoreapp2.1\CountingStrings.Service.AssemblyInfoInputs.cache
+D:\CountingStrings\CountingStrings\CountingStrings.Service\obj\Debug\netcoreapp2.1\CountingStrings.Service.AssemblyInfo.cs
+D:\CountingStrings\CountingStrings\CountingStrings.Service\bin\Debug\netcoreapp2.1\CountingStrings.Service.pdb
+D:\CountingStrings\CountingStrings\CountingStrings.Service\bin\Debug\netcoreapp2.1\CountingStrings.API.Bus.dll
+D:\CountingStrings\CountingStrings\CountingStrings.Service\bin\Debug\netcoreapp2.1\CountingStrings.API.Bus.pdb
+D:\CountingStrings\CountingStrings\CountingStrings.Service\obj\Debug\netcoreapp2.1\CountingStrings.Service.csproj.CopyComplete
+D:\CountingStrings\CountingStrings\CountingStrings.Service\obj\Debug\netcoreapp2.1\CountingStrings.Service.dll
+D:\CountingStrings\CountingStrings\CountingStrings.Service\obj\Debug\netcoreapp2.1\CountingStrings.Service.pdb

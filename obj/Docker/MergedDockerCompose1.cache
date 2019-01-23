@@ -1,0 +1,49 @@
+networks:
+  new: {}
+services:
+  countingstrings.api:
+    build:
+      context: D:\CountingStrings\CountingStrings
+      dockerfile: CountingStrings.API/Dockerfile
+    depends_on:
+    - db
+    - rabbitmq
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: countingstringsapi
+    networks:
+      new: null
+    ports:
+    - target: 80
+  countingstrings.service:
+    build:
+      context: D:\CountingStrings\CountingStrings
+      dockerfile: CountingStrings.Service/Dockerfile
+    depends_on:
+    - db
+    - rabbitmq
+    image: countingstringsservice
+    networks:
+      new: null
+  db:
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: p@ssw0rd
+    image: mcr.microsoft.com/mssql/server
+    networks:
+      new: null
+    volumes:
+    - ms-sqlserver-data:/var/opt/mssql:rw
+  rabbitmq:
+    depends_on:
+    - db
+    image: rabbitmq:3-management
+    networks:
+      new: null
+    ports:
+    - published: 15672
+      target: 15672
+version: '3.4'
+volumes:
+  ms-sqlserver-data:
+    driver: local

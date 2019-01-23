@@ -1,0 +1,11 @@
+D:\CountingStrings\CountingStrings\bin\Debug\CountingStrings.API.dll
+D:\CountingStrings\CountingStrings\bin\Debug\CountingStrings.API.DataAccess.dll
+D:\CountingStrings\CountingStrings\bin\Debug\CountingStrings.API.Bus.dll
+D:\CountingStrings\CountingStrings\bin\Debug\CountingStrings.API.pdb
+D:\CountingStrings\CountingStrings\bin\Debug\CountingStrings.API.DataAccess.pdb
+D:\CountingStrings\CountingStrings\bin\Debug\CountingStrings.API.Bus.pdb
+D:\CountingStrings\CountingStrings\obj\Debug\docker-compose.dcprojAssemblyReference.cache
+D:\CountingStrings\CountingStrings\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
+D:\CountingStrings\CountingStrings\obj\Debug\docker-compose.dcproj.CopyComplete
+D:\CountingStrings\CountingStrings\bin\Debug\CountingStrings.Service.dll
+D:\CountingStrings\CountingStrings\bin\Debug\CountingStrings.Service.pdb
