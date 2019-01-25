@@ -7,3 +7,12 @@ D:\CountingStrings\CountingStrings\CountingStrings.API.DataAccess\obj\Debug\netc
 D:\CountingStrings\CountingStrings\CountingStrings.API.DataAccess\obj\Debug\netcoreapp2.1\CountingStrings.API.DataAccess.dll
 D:\CountingStrings\CountingStrings\CountingStrings.API.DataAccess\obj\Debug\netcoreapp2.1\CountingStrings.API.DataAccess.pdb
 D:\CountingStrings\CountingStrings\CountingStrings.API.DataAccess\obj\Debug\netcoreapp2.1\CountingStrings.API.DataAccess.csprojAssemblyReference.cache
+C:\CountingStrings\CountingStrings.API.DataAccess\bin\Debug\netcoreapp2.1\CountingStrings.API.DataAccess.deps.json
+C:\CountingStrings\CountingStrings.API.DataAccess\bin\Debug\netcoreapp2.1\CountingStrings.API.DataAccess.dll
+C:\CountingStrings\CountingStrings.API.DataAccess\bin\Debug\netcoreapp2.1\CountingStrings.API.DataAccess.pdb
+C:\CountingStrings\CountingStrings.API.DataAccess\obj\Debug\netcoreapp2.1\CountingStrings.API.DataAccess.csproj.CoreCompileInputs.cache
+C:\CountingStrings\CountingStrings.API.DataAccess\obj\Debug\netcoreapp2.1\CountingStrings.API.DataAccess.AssemblyInfoInputs.cache
+C:\CountingStrings\CountingStrings.API.DataAccess\obj\Debug\netcoreapp2.1\CountingStrings.API.DataAccess.AssemblyInfo.cs
+C:\CountingStrings\CountingStrings.API.DataAccess\obj\Debug\netcoreapp2.1\CountingStrings.API.DataAccess.dll
+C:\CountingStrings\CountingStrings.API.DataAccess\obj\Debug\netcoreapp2.1\CountingStrings.API.DataAccess.pdb
+C:\CountingStrings\CountingStrings.API.DataAccess\obj\Debug\netcoreapp2.1\CountingStrings.API.DataAccess.csprojAssemblyReference.cache

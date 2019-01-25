@@ -1953,11 +1953,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CountingStrings\\CountingStrings\\CountingStrings.API.DataAccess\\CountingStrings.API.DataAccess.csproj",
+      "projectUniqueName": "C:\\CountingStrings\\CountingStrings.API.DataAccess\\CountingStrings.API.DataAccess.csproj",
       "projectName": "CountingStrings.API.DataAccess",
-      "projectPath": "D:\\CountingStrings\\CountingStrings\\CountingStrings.API.DataAccess\\CountingStrings.API.DataAccess.csproj",
+      "projectPath": "C:\\CountingStrings\\CountingStrings.API.DataAccess\\CountingStrings.API.DataAccess.csproj",
       "packagesPath": "C:\\Users\\cristian.matturro\\.nuget\\packages\\",
-      "outputPath": "D:\\CountingStrings\\CountingStrings\\CountingStrings.API.DataAccess\\obj\\",
+      "outputPath": "C:\\CountingStrings\\CountingStrings.API.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

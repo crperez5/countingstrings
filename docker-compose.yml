@@ -5,6 +5,8 @@ services:
         build:
             context: .
             dockerfile: CountingStrings.API/Dockerfile
+        env_file:
+            - 'variables.env'
         networks:
             - new
         depends_on:
@@ -16,29 +18,31 @@ services:
             - "15672:15672" 
         networks:
             - new 
-        depends_on:
+        depends_on: 
             - db
     countingstrings.service:
         image: ${DOCKER_REGISTRY}countingstringsservice
         build:
             context: .
             dockerfile: CountingStrings.Service/Dockerfile
+        env_file:
+            - 'variables.env' 
         networks:
             - new
         depends_on:
             - rabbitmq
-            - db
+            - db 
     db:
-        image: "mcr.microsoft.com/mssql/server"
+        image: ${DOCKER_REGISTRY}countingstringsdb
+        build:
+            context: ./CountingStrings.DB
+            dockerfile: Dockerfile
         networks:
             - new
-        environment:
-            SA_PASSWORD: "p@ssw0rd"
-            ACCEPT_EULA: "Y"
         volumes:
-            - ms-sqlserver-data:/var/opt/mssql
+            - ms-sqlserver-data-v2:/var/opt/mssql
 networks:
     new:
 volumes:
-    ms-sqlserver-data:
-        driver: local
+    ms-sqlserver-data-v2:
+        driver: local 

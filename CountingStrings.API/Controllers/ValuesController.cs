@@ -1,7 +1,4 @@
-﻿using System.Threading.Tasks;
-using CountingStrings.API.Bus;
-using CountingStrings.API.DataAccess.Entities;
-using CountingStrings.API.DataAccess.Repositories;
+﻿using CountingStrings.API.DataAccess.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using NServiceBus;
 
@@ -28,15 +25,15 @@ namespace CountingStrings.API.Controllers
         //    return new string[] { "value1", "value2" };
         //}
         
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Inventory>> Get(int id)
-        {
-            var message = new MyMessage();
+        //[HttpGet("{id}")]
+        //public async Task<ActionResult<Inventory>> Get(int id)
+        //{
+        //    var message = new MyMessage();
 
-            await this._messageSession.Send(message).ConfigureAwait(false);
+        //    await this._messageSession.Send(message).ConfigureAwait(false);
 
-            return await this._inventoryRepository.GetById(id);
-        }
+        //    return await this._inventoryRepository.GetById(id);
+        //}
 
         // POST api/values
         [HttpPost]

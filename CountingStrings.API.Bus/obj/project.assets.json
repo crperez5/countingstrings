@@ -1736,11 +1736,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CountingStrings\\CountingStrings\\CountingStrings.API.Bus\\CountingStrings.API.Bus.csproj",
+      "projectUniqueName": "C:\\CountingStrings\\CountingStrings.API.Bus\\CountingStrings.API.Bus.csproj",
       "projectName": "CountingStrings.API.Bus",
-      "projectPath": "D:\\CountingStrings\\CountingStrings\\CountingStrings.API.Bus\\CountingStrings.API.Bus.csproj",
+      "projectPath": "C:\\CountingStrings\\CountingStrings.API.Bus\\CountingStrings.API.Bus.csproj",
       "packagesPath": "C:\\Users\\cristian.matturro\\.nuget\\packages\\",
-      "outputPath": "D:\\CountingStrings\\CountingStrings\\CountingStrings.API.Bus\\obj\\",
+      "outputPath": "C:\\CountingStrings\\CountingStrings.API.Bus\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
