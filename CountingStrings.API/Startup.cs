@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using CountingStrings.API.Contract;
 using CountingStrings.API.Data.Repositories;
 using Microsoft.AspNetCore.Builder;
@@ -36,9 +37,20 @@ namespace CountingStrings.API
             var routing = transport.Routing();
             routing.RouteToEndpoint(typeof(OpenSession).Assembly, "CountingStrings.Service");
 
-            var endpoint = Endpoint.Start(endpointConfiguration).GetAwaiter().GetResult();
-
-            services.AddSingleton<IMessageSession>(endpoint);
+            var started = false;
+            while (!started)
+            {
+                try
+                {
+                    var endpoint = Endpoint.Start(endpointConfiguration).GetAwaiter().GetResult();
+                    services.AddSingleton<IMessageSession>(endpoint);
+                    started = true;
+                }
+                catch (Exception ex)
+                {
+                    Thread.Sleep(TimeSpan.FromMinutes(2));
+                }
+            }
 
             #endregion
 

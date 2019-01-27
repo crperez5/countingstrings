@@ -1,0 +1,3 @@
+az group create --name countingstringsrg --location "North Europe"
+az appservice plan create --name countingstringssp --resource-group countingstringsrg --sku S1 --is-linux
+az webapp create --resource-group countingstringsrg --plan countingstringssp --name countingstrings --multicontainer-config-type compose --multicontainer-config-file docker-compose-prod.yml

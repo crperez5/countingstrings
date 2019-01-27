@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Threading;
 using AutoMapper;
 using CountingStrings.Service.Data;
 using CountingStrings.Service.Data.Mappings;
@@ -63,8 +64,18 @@ namespace CountingStrings.Worker
                     customizations.ExistingServices(services);
                 });
 
-            var endpoint = Endpoint.Start(endpointConfiguration).GetAwaiter().GetResult();
-            return endpoint;
+            while (true)
+            {
+                try
+                {
+                    var endpoint = Endpoint.Start(endpointConfiguration).GetAwaiter().GetResult();
+                    return endpoint;
+                }
+                catch (Exception ex)
+                {
+                    Thread.Sleep(TimeSpan.FromMinutes(2));
+                }
+            }
         }
     }
 }
