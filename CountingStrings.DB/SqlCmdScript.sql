@@ -56,10 +56,6 @@ CREATE NONCLUSTERED INDEX IX_WordDateCounts_WordDate
 ON WordDateCounts (Word, [Date]);
 GO
 
-CREATE NONCLUSTERED INDEX IX_WordDateCounts_DateCreated
-ON WordDateCounts (DateCreated DESC);
-GO
-
 CREATE TABLE WorkerJobs (
     Id uniqueidentifier Default NEWSEQUENTIALID() Primary Key, 
     ProcessId int Not Null,

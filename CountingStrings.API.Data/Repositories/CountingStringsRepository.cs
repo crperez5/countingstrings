@@ -56,7 +56,7 @@ namespace CountingStrings.API.Data.Repositories
 
         public async Task<List<WordFrequency>> GetWordFrequency(string word, DateTime? rangeStartDate, DateTime? rangeEndDate)
         {
-            const string sqlTemplate = @"SELECT TOP 1 Word, Date, Count FROM WordDateCounts /**where**/ ORDER BY DateCreated DESC";
+            const string sqlTemplate = @"SELECT Word, Date, Count FROM WordDateCounts /**where**/";
 
             var sqlBuilder = new SqlBuilder();
             var template = sqlBuilder.AddTemplate(sqlTemplate);
