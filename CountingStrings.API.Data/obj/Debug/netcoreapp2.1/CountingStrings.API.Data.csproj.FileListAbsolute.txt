@@ -1,0 +1,9 @@
+C:\CountingStrings\CountingStrings.API.Data\bin\Debug\netcoreapp2.1\CountingStrings.API.Data.deps.json
+C:\CountingStrings\CountingStrings.API.Data\bin\Debug\netcoreapp2.1\CountingStrings.API.Data.dll
+C:\CountingStrings\CountingStrings.API.Data\obj\Debug\netcoreapp2.1\CountingStrings.API.Data.csproj.CoreCompileInputs.cache
+C:\CountingStrings\CountingStrings.API.Data\obj\Debug\netcoreapp2.1\CountingStrings.API.Data.AssemblyInfoInputs.cache
+C:\CountingStrings\CountingStrings.API.Data\obj\Debug\netcoreapp2.1\CountingStrings.API.Data.AssemblyInfo.cs
+C:\CountingStrings\CountingStrings.API.Data\bin\Debug\netcoreapp2.1\CountingStrings.API.Data.pdb
+C:\CountingStrings\CountingStrings.API.Data\obj\Debug\netcoreapp2.1\CountingStrings.API.Data.dll
+C:\CountingStrings\CountingStrings.API.Data\obj\Debug\netcoreapp2.1\CountingStrings.API.Data.pdb
+C:\CountingStrings\CountingStrings.API.Data\obj\Debug\netcoreapp2.1\CountingStrings.API.Data.csprojAssemblyReference.cache

@@ -1,0 +1,746 @@
+﻿2019-01-27 12:02:01.025 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-27 12:02:01.566 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-27'.
+
+2019-01-27 12:02:12.462 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 12:02:12.477 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0009943
+2019-01-27 12:02:13.073 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '32'
+2019-01-27 12:02:22.509 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 12:02:22.519 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002566
+2019-01-27 12:02:22.529 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '32'
+2019-01-27 12:02:32.565 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 12:02:32.596 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002129
+2019-01-27 12:02:32.631 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '32'
+2019-01-27 12:02:42.643 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 12:02:42.653 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001884
+2019-01-27 12:02:47.417 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '32'
+2019-01-27 12:02:57.425 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 12:02:57.434 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002410
+2019-01-27 12:02:57.449 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '32'
+2019-01-27 12:03:07.460 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 12:03:07.472 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001892
+2019-01-27 12:03:07.516 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '32'
+2019-01-27 12:03:17.499 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 12:03:17.506 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001322
+2019-01-27 12:03:17.527 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '32'
+2019-01-27 13:17:31.156 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-27 13:17:31.623 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-27'.
+
+2019-01-27 13:17:32.467 INFO  NServiceBus.DefaultScheduler Could not find any scheduled task with id 7fe317df-5c38-4c19-8f92-42d82583707d. The DefaultScheduler does not persist tasks between restarts.
+2019-01-27 13:17:42.433 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:17:42.449 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0010876
+2019-01-27 13:17:43.125 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '144'
+2019-01-27 13:17:52.503 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:17:52.512 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0004205
+2019-01-27 13:17:52.528 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '144'
+2019-01-27 13:18:02.527 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:18:02.536 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002059
+2019-01-27 13:18:02.548 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '144'
+2019-01-27 13:18:12.556 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:18:12.570 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001979
+2019-01-27 13:18:12.628 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '144'
+2019-01-27 13:18:22.609 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:18:22.619 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002964
+2019-01-27 13:18:22.634 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '144'
+2019-01-27 13:18:32.641 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:18:32.658 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001594
+2019-01-27 13:18:32.688 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '144'
+2019-01-27 13:18:42.680 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:18:42.690 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0005660
+2019-01-27 13:18:42.702 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '144'
+2019-01-27 13:18:52.709 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:18:52.717 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002631
+2019-01-27 13:18:52.729 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '144'
+2019-01-27 13:19:02.735 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:19:02.744 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001900
+2019-01-27 13:19:02.772 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '144'
+2019-01-27 13:19:12.773 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:19:12.788 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002001
+2019-01-27 13:19:12.806 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '144'
+2019-01-27 13:19:22.840 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:19:22.860 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001347
+2019-01-27 13:19:22.899 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '144'
+2019-01-27 13:20:31.278 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-27 13:20:31.700 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-27'.
+
+2019-01-27 13:20:32.507 INFO  NServiceBus.DefaultScheduler Could not find any scheduled task with id 55864cdf-a7d1-4ad5-a081-979b52a8783d. The DefaultScheduler does not persist tasks between restarts.
+2019-01-27 13:20:42.500 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:20:42.512 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0015354
+2019-01-27 13:20:42.973 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '283'
+2019-01-27 13:20:52.533 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:20:52.541 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002916
+2019-01-27 13:20:52.588 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '283'
+2019-01-27 13:21:02.560 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:21:02.573 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002162
+2019-01-27 13:21:02.592 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '283'
+2019-01-27 13:21:12.591 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:21:12.601 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001510
+2019-01-27 13:21:12.623 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '283'
+2019-01-27 13:21:22.632 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:21:22.639 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0003273
+2019-01-27 13:21:22.693 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '283'
+2019-01-27 13:21:32.657 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:21:32.666 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002157
+2019-01-27 13:21:32.677 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '283'
+2019-01-27 13:21:42.681 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:21:42.691 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001311
+2019-01-27 13:21:42.701 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '283'
+2019-01-27 13:21:52.709 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:21:52.718 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002387
+2019-01-27 13:21:52.728 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '283'
+2019-01-27 13:23:35.695 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-27 13:23:36.124 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-27'.
+
+2019-01-27 13:23:47.483 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:23:47.494 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0015524
+2019-01-27 13:23:47.965 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '19'
+2019-01-27 13:23:57.519 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:23:57.536 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002534
+2019-01-27 13:23:57.577 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '19'
+2019-01-27 13:24:07.561 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:24:07.570 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002099
+2019-01-27 13:24:07.584 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '19'
+2019-01-27 13:24:17.591 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:24:17.602 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002595
+2019-01-27 13:24:17.612 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '19'
+2019-01-27 13:24:27.624 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:24:27.634 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001348
+2019-01-27 13:24:27.670 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '19'
+2019-01-27 13:24:37.652 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:24:37.661 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0003094
+2019-01-27 13:24:37.674 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '19'
+2019-01-27 13:24:47.682 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:24:47.701 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001726
+2019-01-27 13:24:47.713 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '19'
+2019-01-27 13:24:57.719 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:24:57.727 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002159
+2019-01-27 13:24:57.740 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '19'
+2019-01-27 13:25:07.746 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:25:07.757 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001613
+2019-01-27 13:25:07.766 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '19'
+2019-01-27 13:25:17.773 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:25:17.784 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001951
+2019-01-27 13:25:17.797 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '19'
+2019-01-27 13:25:27.802 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:25:27.812 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001301
+2019-01-27 13:25:27.850 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '19'
+2019-01-27 13:25:37.830 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:25:37.849 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001735
+2019-01-27 13:25:37.875 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '19'
+2019-01-27 13:25:47.894 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:25:47.903 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001941
+2019-01-27 13:25:47.919 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '19'
+2019-01-27 13:25:57.924 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:25:57.932 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001564
+2019-01-27 13:25:57.967 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '19'
+2019-01-27 13:26:07.951 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:26:07.970 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001717
+2019-01-27 13:26:07.986 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '19'
+2019-01-27 13:26:17.987 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:26:17.997 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001267
+2019-01-27 13:26:18.010 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '19'
+2019-01-27 13:26:28.017 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:26:28.028 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002560
+2019-01-27 13:26:28.039 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '19'
+2019-01-27 13:26:38.045 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:26:38.053 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001339
+2019-01-27 13:26:38.068 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '19'
+2019-01-27 13:26:48.078 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:26:48.087 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001957
+2019-01-27 13:26:48.132 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '19'
+2019-01-27 13:26:58.107 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:26:58.117 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001429
+2019-01-27 13:26:58.171 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '19'
+2019-01-27 13:32:27.399 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-27 13:32:27.862 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-27'.
+
+2019-01-27 13:32:38.788 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:32:38.796 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0013941
+2019-01-27 13:32:39.280 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 13:32:48.819 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:32:48.829 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0003911
+2019-01-27 13:32:48.853 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 13:32:58.852 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:32:58.862 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001942
+2019-01-27 13:32:58.891 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 13:33:08.884 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:33:08.892 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001617
+2019-01-27 13:33:08.952 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 13:33:18.913 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:33:18.930 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001391
+2019-01-27 13:33:18.942 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 13:33:28.949 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:33:28.958 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002305
+2019-01-27 13:33:28.992 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 13:33:38.975 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:33:38.985 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002423
+2019-01-27 13:33:38.997 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 13:33:49.004 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:33:49.024 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001354
+2019-01-27 13:33:49.066 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 13:33:59.044 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:33:59.053 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002693
+2019-01-27 13:33:59.065 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 13:34:09.072 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:34:09.081 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001713
+2019-01-27 13:34:09.100 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 13:34:19.096 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:34:19.106 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002025
+2019-01-27 13:34:19.116 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 13:34:29.122 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:34:29.132 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002270
+2019-01-27 13:34:29.149 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 13:34:39.150 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:34:39.161 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002157
+2019-01-27 13:34:39.178 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 13:34:49.207 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:34:49.245 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0070459
+2019-01-27 13:34:49.269 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 13:34:59.277 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:34:59.287 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001769
+2019-01-27 13:34:59.342 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 13:35:09.309 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:35:09.326 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002082
+2019-01-27 13:35:09.370 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 13:35:19.354 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:35:19.365 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002227
+2019-01-27 13:35:19.381 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 13:35:29.387 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:35:29.401 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0006865
+2019-01-27 13:35:29.413 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 13:35:39.421 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 13:35:39.437 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001731
+2019-01-27 13:35:39.453 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 13:37:14.033 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-27 13:37:14.602 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-27'.
+
+2019-01-27 13:37:15.570 INFO  NServiceBus.DefaultScheduler Could not find any scheduled task with id ae51f8cb-95c0-40bb-82b4-55af8a3bbe93. The DefaultScheduler does not persist tasks between restarts.
+2019-01-27 14:18:54.610 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-27 14:18:55.023 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-27'.
+
+2019-01-27 14:18:55.787 INFO  NServiceBus.DefaultScheduler Could not find any scheduled task with id 774d5a9d-658c-4b52-888f-adc922251380. The DefaultScheduler does not persist tasks between restarts.
+2019-01-27 14:19:05.782 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:19:05.796 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0008776
+2019-01-27 14:19:06.400 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '283'
+2019-01-27 14:19:15.821 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:19:15.834 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0007105
+2019-01-27 14:19:15.850 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '283'
+2019-01-27 14:19:25.858 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:19:25.871 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0003649
+2019-01-27 14:19:25.884 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '283'
+2019-01-27 14:19:35.893 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:19:35.904 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001718
+2019-01-27 14:19:35.918 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '283'
+2019-01-27 14:19:45.929 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:19:45.945 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002516
+2019-01-27 14:19:45.992 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '283'
+2019-01-27 14:19:55.967 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:19:55.976 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0005209
+2019-01-27 14:19:55.988 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '283'
+2019-01-27 14:20:05.995 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:20:06.008 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001892
+2019-01-27 14:20:06.024 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '283'
+2019-01-27 14:20:16.032 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:20:16.043 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0005019
+2019-01-27 14:20:16.070 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '283'
+2019-01-27 14:20:26.069 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:20:26.080 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0004888
+2019-01-27 14:20:26.095 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '283'
+2019-01-27 14:20:36.098 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:20:36.112 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001774
+2019-01-27 14:20:36.128 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '283'
+2019-01-27 14:20:46.134 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:20:46.154 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002528
+2019-01-27 14:20:46.172 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '283'
+2019-01-27 14:23:25.013 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-27 14:23:25.552 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-27'.
+
+2019-01-27 14:23:36.456 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:23:36.470 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0012760
+2019-01-27 14:23:36.971 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:23:46.518 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:23:46.535 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0005315
+2019-01-27 14:23:46.554 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:23:56.563 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:23:56.573 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001880
+2019-01-27 14:23:56.592 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:24:06.587 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:24:06.597 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001698
+2019-01-27 14:24:06.639 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:24:16.622 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:24:16.644 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001687
+2019-01-27 14:24:16.673 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:24:26.684 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:24:26.694 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001392
+2019-01-27 14:24:26.704 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:24:36.710 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:24:36.720 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001742
+2019-01-27 14:24:36.735 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:24:46.742 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:24:46.751 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0004409
+2019-01-27 14:24:46.783 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:24:56.779 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:24:56.791 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002532
+2019-01-27 14:24:56.827 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:25:06.811 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:25:06.821 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001667
+2019-01-27 14:25:06.833 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:25:16.840 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:25:16.861 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001574
+2019-01-27 14:25:16.878 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:25:26.876 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:25:26.885 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001680
+2019-01-27 14:25:26.941 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:25:36.909 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:25:36.929 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002862
+2019-01-27 14:25:36.965 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:25:46.975 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:25:46.988 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001819
+2019-01-27 14:25:47.014 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:25:57.018 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:25:57.028 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002553
+2019-01-27 14:25:57.065 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:26:07.045 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:26:07.055 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002381
+2019-01-27 14:26:07.064 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:26:17.072 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:26:17.081 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001749
+2019-01-27 14:26:17.117 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:26:27.097 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:26:27.119 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001821
+2019-01-27 14:26:27.161 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:26:37.135 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:26:37.156 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001507
+2019-01-27 14:26:37.171 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:26:47.176 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:26:47.185 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002685
+2019-01-27 14:26:47.198 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:26:57.203 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:26:57.212 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0007328
+2019-01-27 14:26:57.227 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:27:07.231 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:27:07.244 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002391
+2019-01-27 14:27:07.263 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:27:17.266 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:27:17.278 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002080
+2019-01-27 14:27:17.313 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:27:27.297 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:27:27.307 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001408
+2019-01-27 14:27:27.324 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:27:37.324 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:27:37.332 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002156
+2019-01-27 14:27:37.352 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:27:47.348 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:27:47.358 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002674
+2019-01-27 14:27:47.373 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:27:57.376 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:27:57.386 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0004898
+2019-01-27 14:27:57.399 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:28:07.407 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:28:07.422 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001321
+2019-01-27 14:28:07.434 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:28:17.440 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:28:17.449 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002100
+2019-01-27 14:28:17.464 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:28:27.471 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:28:27.481 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002542
+2019-01-27 14:28:27.495 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:28:37.503 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:28:37.512 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001547
+2019-01-27 14:28:37.554 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:28:47.536 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:28:47.548 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001421
+2019-01-27 14:28:47.565 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:28:57.565 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:28:57.575 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002793
+2019-01-27 14:28:57.614 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:29:07.595 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:29:07.607 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001630
+2019-01-27 14:29:07.618 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:29:17.625 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:29:17.634 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002683
+2019-01-27 14:29:17.645 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:29:27.652 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:29:27.662 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0003710
+2019-01-27 14:29:27.672 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:29:37.680 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:29:37.688 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001345
+2019-01-27 14:29:37.712 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:29:47.711 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:29:47.723 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0003969
+2019-01-27 14:29:47.768 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:29:57.744 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:29:57.757 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002188
+2019-01-27 14:29:57.791 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:30:07.786 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:30:07.809 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002131
+2019-01-27 14:30:07.846 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:30:17.855 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:30:17.867 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001496
+2019-01-27 14:30:17.907 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:30:27.885 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:30:27.896 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0004243
+2019-01-27 14:30:27.921 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:30:37.916 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:30:37.926 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0003170
+2019-01-27 14:30:37.945 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:30:47.944 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:30:47.957 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002522
+2019-01-27 14:30:47.967 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:30:57.977 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:30:57.991 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002194
+2019-01-27 14:30:58.003 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:31:08.007 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:31:08.018 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0003035
+2019-01-27 14:31:08.032 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:31:18.040 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:31:18.055 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002569
+2019-01-27 14:31:18.092 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:31:28.075 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:31:28.093 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002258
+2019-01-27 14:31:28.128 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:31:38.135 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:31:38.144 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001492
+2019-01-27 14:31:38.154 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:31:48.165 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:31:48.175 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001764
+2019-01-27 14:31:48.187 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:31:58.197 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:31:58.209 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002450
+2019-01-27 14:31:58.238 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:32:08.248 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:32:08.258 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002376
+2019-01-27 14:32:08.294 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:32:18.272 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:32:18.288 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0007288
+2019-01-27 14:32:18.309 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:32:28.309 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:32:28.319 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001963
+2019-01-27 14:32:28.356 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:32:38.349 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:32:38.358 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002472
+2019-01-27 14:32:38.387 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:32:48.404 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:32:48.417 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001535
+2019-01-27 14:32:48.435 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 14:32:58.442 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 14:32:58.451 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0003208
+2019-01-27 14:32:58.464 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '31'
+2019-01-27 15:39:30.245 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-27 15:39:30.878 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-27'.
+
+2019-01-27 15:39:41.815 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:39:41.830 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0017398
+2019-01-27 15:39:42.325 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 15:39:51.856 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:39:51.866 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002569
+2019-01-27 15:39:51.878 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 15:40:01.886 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:40:01.895 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002706
+2019-01-27 15:40:01.908 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 15:40:11.926 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:40:11.936 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002746
+2019-01-27 15:40:11.946 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 15:40:21.953 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:40:21.963 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002062
+2019-01-27 15:40:21.978 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 15:40:31.981 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:40:31.992 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002857
+2019-01-27 15:40:32.012 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 15:40:42.008 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:40:42.035 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001516
+2019-01-27 15:40:42.072 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 15:40:52.056 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:40:52.072 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0003137
+2019-01-27 15:40:52.092 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 15:41:02.088 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:41:02.102 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0003037
+2019-01-27 15:41:02.118 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 15:41:12.128 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:41:12.167 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001901
+2019-01-27 15:41:12.199 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 15:41:22.196 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:41:22.205 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001752
+2019-01-27 15:41:22.223 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 15:41:32.227 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:41:32.243 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0007729
+2019-01-27 15:41:32.268 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '28'
+2019-01-27 15:44:03.058 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-27 15:44:03.667 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-27'.
+
+2019-01-27 15:44:04.703 INFO  NServiceBus.DefaultScheduler Could not find any scheduled task with id b9b463f4-7203-4eca-9ab4-53d048c9184b. The DefaultScheduler does not persist tasks between restarts.
+2019-01-27 15:44:14.740 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:44:14.770 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0017383
+2019-01-27 15:44:15.459 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:44:24.814 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:44:24.826 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0003307
+2019-01-27 15:44:24.885 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:44:34.855 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:44:34.884 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0056869
+2019-01-27 15:44:34.901 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:44:44.908 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:44:44.917 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001452
+2019-01-27 15:44:44.930 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:44:54.937 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:44:54.946 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002432
+2019-01-27 15:44:54.988 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:45:04.973 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:45:04.986 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002059
+2019-01-27 15:45:04.999 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:45:15.007 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:45:15.016 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002022
+2019-01-27 15:45:15.071 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:45:25.035 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:45:25.048 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001741
+2019-01-27 15:45:25.078 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:45:35.086 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:45:35.104 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001838
+2019-01-27 15:45:35.127 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:45:45.151 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:45:45.161 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001794
+2019-01-27 15:45:45.182 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:45:55.180 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:45:55.196 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001415
+2019-01-27 15:45:55.213 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:46:05.220 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:46:05.243 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002375
+2019-01-27 15:46:05.262 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:46:15.274 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:46:15.285 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002051
+2019-01-27 15:46:15.296 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:46:25.305 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:46:25.321 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001615
+2019-01-27 15:46:25.335 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:46:35.342 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:46:35.351 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0008276
+2019-01-27 15:46:35.363 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:46:45.372 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:46:45.383 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002598
+2019-01-27 15:46:45.404 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:46:55.401 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:46:55.414 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001849
+2019-01-27 15:46:55.447 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:47:05.444 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:47:05.458 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002739
+2019-01-27 15:47:05.473 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:47:15.482 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:47:15.492 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0003581
+2019-01-27 15:47:15.508 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:47:25.517 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:47:25.532 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001778
+2019-01-27 15:47:25.599 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:47:35.563 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:47:35.573 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001447
+2019-01-27 15:47:35.589 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:47:45.596 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:47:45.605 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002651
+2019-01-27 15:47:45.661 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:47:55.623 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:47:55.642 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001542
+2019-01-27 15:47:55.686 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:48:05.687 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:48:05.711 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001637
+2019-01-27 15:48:05.766 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:48:15.759 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:48:15.768 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002589
+2019-01-27 15:48:15.781 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:48:25.789 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:48:25.808 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002004
+2019-01-27 15:48:25.829 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:48:35.838 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:48:35.851 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001482
+2019-01-27 15:48:35.900 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:48:45.875 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:48:45.893 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001991
+2019-01-27 15:48:45.954 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:48:55.919 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:48:55.930 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002171
+2019-01-27 15:48:55.976 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:49:05.958 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:49:05.969 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001404
+2019-01-27 15:49:06.026 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '174'
+2019-01-27 15:57:36.099 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-27 15:57:36.719 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-27'.
+
+2019-01-27 15:57:47.904 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:57:47.914 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0010408
+2019-01-27 15:57:48.376 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 15:57:57.936 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:57:57.949 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0003107
+2019-01-27 15:57:57.967 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 15:58:07.975 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:58:07.985 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001339
+2019-01-27 15:58:08.013 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 15:58:18.011 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:58:18.025 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002324
+2019-01-27 15:58:18.042 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 15:58:28.051 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:58:28.069 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002936
+2019-01-27 15:58:28.085 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 15:58:38.092 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:58:38.099 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002235
+2019-01-27 15:58:38.116 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 15:58:48.117 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:58:48.127 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002462
+2019-01-27 15:58:48.144 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 15:58:58.148 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:58:58.158 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002559
+2019-01-27 15:58:58.180 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 15:59:08.180 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:59:08.191 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002546
+2019-01-27 15:59:08.207 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 15:59:18.209 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:59:18.218 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001345
+2019-01-27 15:59:18.241 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 15:59:28.239 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:59:28.251 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0003966
+2019-01-27 15:59:28.268 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 15:59:38.269 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:59:38.289 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001869
+2019-01-27 15:59:38.305 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 15:59:48.314 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:59:48.324 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001717
+2019-01-27 15:59:48.339 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 15:59:58.346 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 15:59:58.357 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002660
+2019-01-27 15:59:58.369 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:00:08.375 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:00:08.393 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001592
+2019-01-27 16:00:08.425 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:00:18.420 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:00:18.429 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002035
+2019-01-27 16:00:18.445 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:00:28.447 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:00:28.454 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002621
+2019-01-27 16:00:28.467 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:00:38.477 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:00:38.494 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001993
+2019-01-27 16:00:38.532 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:00:48.521 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:00:48.532 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001748
+2019-01-27 16:00:48.551 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:00:58.552 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:00:58.560 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001534
+2019-01-27 16:00:58.573 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:01:08.580 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:01:08.592 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001603
+2019-01-27 16:01:08.605 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:01:18.613 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:01:18.620 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001417
+2019-01-27 16:01:18.634 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:01:28.641 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:01:28.653 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002490
+2019-01-27 16:01:28.663 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:01:38.677 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:01:38.692 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002312
+2019-01-27 16:01:38.703 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:01:48.709 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:01:48.726 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001487
+2019-01-27 16:01:48.739 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:01:58.747 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:01:58.755 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001511
+2019-01-27 16:01:58.797 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:02:08.777 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:02:08.788 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001818
+2019-01-27 16:02:08.813 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:02:18.809 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:02:18.825 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0004303
+2019-01-27 16:02:18.843 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:02:28.841 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:02:28.850 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001382
+2019-01-27 16:02:28.874 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:02:38.866 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:02:38.877 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001752
+2019-01-27 16:02:38.893 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:02:48.895 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:02:48.905 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002137
+2019-01-27 16:02:48.919 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:02:58.926 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:02:58.943 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002325
+2019-01-27 16:02:58.965 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:03:08.969 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:03:08.984 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001633
+2019-01-27 16:03:09.018 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:03:19.002 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:03:19.010 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002142
+2019-01-27 16:03:19.029 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:03:29.024 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:03:29.033 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001612
+2019-01-27 16:03:29.069 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:03:39.060 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:03:39.077 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0011148
+2019-01-27 16:03:39.092 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:03:49.100 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:03:49.109 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001783
+2019-01-27 16:03:49.126 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:03:59.127 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:03:59.141 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001677
+2019-01-27 16:03:59.159 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:04:09.156 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:04:09.164 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001747
+2019-01-27 16:04:09.178 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:04:19.186 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:04:19.197 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001954
+2019-01-27 16:04:19.238 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:04:29.220 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:04:29.241 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0003242
+2019-01-27 16:04:29.263 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:04:39.262 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:04:39.276 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002331
+2019-01-27 16:04:39.318 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:04:49.298 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:04:49.308 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001657
+2019-01-27 16:04:49.319 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:04:59.327 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:04:59.340 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0003355
+2019-01-27 16:04:59.356 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:05:09.364 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:05:09.380 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0003646
+2019-01-27 16:05:09.394 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:05:19.404 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:05:19.416 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0003800
+2019-01-27 16:05:19.435 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:05:29.436 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:05:29.446 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002396
+2019-01-27 16:05:29.459 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:05:39.473 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:05:39.483 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001820
+2019-01-27 16:05:39.501 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:05:49.504 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:05:49.513 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002022
+2019-01-27 16:05:49.538 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:05:59.536 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:05:59.547 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002854
+2019-01-27 16:05:59.559 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:06:09.569 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:06:09.603 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002409
+2019-01-27 16:06:09.635 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:06:19.643 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:06:19.654 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002263
+2019-01-27 16:06:19.666 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:06:29.674 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:06:29.687 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002760
+2019-01-27 16:06:29.734 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:06:39.711 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:06:39.719 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001378
+2019-01-27 16:06:39.731 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:06:49.738 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:06:49.749 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002081
+2019-01-27 16:06:49.786 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:06:59.767 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:06:59.776 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002428
+2019-01-27 16:06:59.789 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:07:09.797 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:07:09.806 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002137
+2019-01-27 16:07:09.819 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:07:19.827 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:07:19.837 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002729
+2019-01-27 16:07:19.865 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:07:29.858 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:07:29.868 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002147
+2019-01-27 16:07:29.880 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:07:39.890 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:07:39.904 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001791
+2019-01-27 16:07:39.947 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'
+2019-01-27 16:07:49.928 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-27 16:07:49.937 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002008
+2019-01-27 16:07:49.956 INFO  CountingStrings.Worker.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '20'

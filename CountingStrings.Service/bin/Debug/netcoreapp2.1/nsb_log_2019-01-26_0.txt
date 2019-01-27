@@ -1,0 +1,349 @@
+﻿2019-01-26 11:09:42.647 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 11:09:43.168 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 11:13:02.473 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 11:13:02.943 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 11:15:19.389 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 11:15:19.878 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 11:18:04.172 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 11:18:04.669 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 11:20:55.612 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 11:20:56.228 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 11:35:21.963 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 11:35:22.482 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 11:51:54.736 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 11:51:55.248 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 12:01:26.749 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 12:01:27.284 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 12:14:08.142 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 12:14:08.660 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 12:14:44.925 INFO  CountingStrings.Service.Handlers.OpenSessionHandler OpenSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:17:30.226 INFO  CountingStrings.Service.Handlers.OpenSessionHandler OpenSession. SessionId 'ce45485a-f7a1-446e-b200-98dd2b36cf6f', ProcessId: '27'
+2019-01-26 12:17:30.795 INFO  CountingStrings.Service.Handlers.OpenSessionHandler OpenSession. SessionId '4a8d13fd-ccf9-40e1-84da-f591d8fc901f', ProcessId: '27'
+2019-01-26 12:17:31.160 INFO  CountingStrings.Service.Handlers.OpenSessionHandler OpenSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:18:05.028 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:18:21.026 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:19:19.943 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:19:26.036 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:19:26.479 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:19:26.563 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:19:26.731 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:19:26.904 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:19:27.094 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:19:27.343 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:19:27.395 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:19:27.615 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:19:27.684 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:19:28.003 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:19:28.095 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:19:28.184 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:19:28.401 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:19:28.481 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:19:28.985 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:19:29.063 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:19:29.167 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:19:29.306 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId '9023dac3-7a31-4647-9e7e-0d552ffc9490', ProcessId: '27'
+2019-01-26 12:19:52.690 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:52.874 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:53.216 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:53.233 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:53.384 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:53.613 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:53.710 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:53.873 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:54.216 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:54.324 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:54.454 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:54.601 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:54.846 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:54.982 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:55.139 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:55.309 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:55.443 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:55.630 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:55.780 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:55.974 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:56.140 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:56.247 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:56.433 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:19:56.434 INFO  CountingStrings.Service.Handlers.OpenSessionHandler CloseSession. SessionId 'dad98f5a-69c7-4011-a394-1347293b4d7f', ProcessId: '27'
+2019-01-26 12:48:49.395 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 12:48:49.901 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 23:29:40.744 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 23:29:41.254 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 23:29:53.849 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:29:53.875 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0026053
+2019-01-26 23:29:54.469 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '25'
+2019-01-26 23:30:29.099 WARN  NServiceBus.Transport.RabbitMQ.ChannelProvider Connection to the broker lost: Unexpected Exception
+2019-01-26 23:30:29.140 WARN  NServiceBus.Transport.RabbitMQ.MessagePumpConnectionFailedCircuitBreaker The circuit breaker for 'CountingStrings.Service MessagePump' is now in the armed state
+2019-01-26 23:30:29.190 INFO  NServiceBus.Transport.RabbitMQ.ChannelProvider Attempting to reconnect in 10 seconds.
+2019-01-26 23:30:29.214 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message 'bcf4a044-1bea-4a19-96dd-a9e101833d74' because of an exception:
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Operand type clash: uniqueidentifier is incompatible with numeric
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at CountingStrings.Service.Handlers.RefreshCalculationsHandler.Handle(RefreshCalculations message, IMessageHandlerContext context) in C:\CountingStrings\CountingStrings.Service\Handlers\RefreshCalculationsHandler.cs:line 34
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 50
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 34
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 248
+2019-01-26 23:30:29.228 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '25'
+2019-01-26 23:39:48.224 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 23:39:48.856 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 23:40:01.016 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:40:01.026 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0012552
+2019-01-26 23:40:01.609 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '26'
+2019-01-26 23:41:19.372 WARN  NServiceBus.Transport.RabbitMQ.ChannelProvider Connection to the broker lost: Unexpected Exception
+2019-01-26 23:41:19.405 WARN  NServiceBus.Transport.RabbitMQ.MessagePumpConnectionFailedCircuitBreaker The circuit breaker for 'CountingStrings.Service MessagePump' is now in the armed state
+2019-01-26 23:41:19.453 INFO  NServiceBus.Transport.RabbitMQ.ChannelProvider Attempting to reconnect in 10 seconds.
+2019-01-26 23:41:19.492 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '182fc2d1-9fe6-4356-ba93-a9e1018604f6' because of an exception:
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The conversion of a datetime2 data type to a datetime data type resulted in an out-of-range value.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at CountingStrings.Service.Handlers.RefreshCalculationsHandler.Handle(RefreshCalculations message, IMessageHandlerContext context) in C:\CountingStrings\CountingStrings.Service\Handlers\RefreshCalculationsHandler.cs:line 34
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 50
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 34
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 248
+2019-01-26 23:41:19.508 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '26'
+2019-01-26 23:45:03.691 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 23:45:04.242 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 23:45:16.380 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:45:16.389 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0015402
+2019-01-26 23:45:16.900 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '26'
+2019-01-26 23:45:27.386 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:45:27.396 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0003544
+2019-01-26 23:45:27.410 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '26'
+2019-01-26 23:49:24.842 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 23:49:25.411 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 23:49:26.465 INFO  NServiceBus.DefaultScheduler Could not find any scheduled task with id 747d5a32-6ce1-4502-b0e4-68cac8fd0552. The DefaultScheduler does not persist tasks between restarts.
+2019-01-26 23:49:27.201 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '101'
+2019-01-26 23:49:27.201 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '101'
+2019-01-26 23:49:36.934 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:49:36.966 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0016659
+2019-01-26 23:49:37.017 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '101'
+2019-01-26 23:50:15.678 WARN  NServiceBus.Transport.RabbitMQ.ChannelProvider Connection to the broker lost: Unexpected Exception
+2019-01-26 23:50:15.723 WARN  NServiceBus.Transport.RabbitMQ.MessagePumpConnectionFailedCircuitBreaker The circuit breaker for 'CountingStrings.Service MessagePump' is now in the armed state
+2019-01-26 23:50:15.783 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message 'c128e3c3-fc07-4786-8796-a9e10187836d' because of an exception:
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'Id', table 'CountingStrings.dbo.WorkerJobs'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at CountingStrings.Service.Handlers.RefreshCalculationsHandler.Handle(RefreshCalculations message, IMessageHandlerContext context) in C:\CountingStrings\CountingStrings.Service\Handlers\RefreshCalculationsHandler.cs:line 34
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 50
+   at NServiceBus.MutateIncomingMessageBehavior.InvokeIncomingMessageMutators(IIncomingLogicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\MessageMutators\MutateInstanceMessage\MutateIncomingMessageBehavior.cs:line 60
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\UnitOfWork\UnitOfWorkBehavior.cs:line 40
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\UnitOfWork\UnitOfWorkBehavior.cs:line 62
+   at NServiceBus.MutateIncomingTransportMessageBehavior.InvokeIncomingTransportMessagesMutators(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\MessageMutators\MutateTransportMessage\MutateIncomingTransportMessageBehavior.cs:line 59
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 34
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 248
+2019-01-26 23:50:15.783 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message 'eb93c537-524c-41cf-b332-a9e101877687' because of an exception:
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'Id', table 'CountingStrings.dbo.WorkerJobs'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at CountingStrings.Service.Handlers.RefreshCalculationsHandler.Handle(RefreshCalculations message, IMessageHandlerContext context) in C:\CountingStrings\CountingStrings.Service\Handlers\RefreshCalculationsHandler.cs:line 34
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 50
+   at NServiceBus.MutateIncomingMessageBehavior.InvokeIncomingMessageMutators(IIncomingLogicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\MessageMutators\MutateInstanceMessage\MutateIncomingMessageBehavior.cs:line 60
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\UnitOfWork\UnitOfWorkBehavior.cs:line 40
+   at NServiceBus.UnitOfWorkBehavior.InvokeUnitsOfWork(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\UnitOfWork\UnitOfWorkBehavior.cs:line 62
+   at NServiceBus.MutateIncomingTransportMessageBehavior.InvokeIncomingTransportMessagesMutators(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\MessageMutators\MutateTransportMessage\MutateIncomingTransportMessageBehavior.cs:line 59
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 34
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 248
+2019-01-26 23:50:15.783 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '5079948e-f7d0-4691-96ac-a9e10188a7e4' because of an exception:
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'Id', table 'CountingStrings.dbo.WorkerJobs'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at CountingStrings.Service.Handlers.RefreshCalculationsHandler.Handle(RefreshCalculations message, IMessageHandlerContext context) in C:\CountingStrings\CountingStrings.Service\Handlers\RefreshCalculationsHandler.cs:line 34
+   at NServiceBus.LoadHandlersConnector.Invoke(IIncomingLogicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\LoadHandlersConnector.cs:line 50
+   at NServiceBus.DeserializeLogicalMessagesConnector.Invoke(IIncomingPhysicalMessageContext context, Func`2 stage) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\DeserializeLogicalMessagesConnector.cs:line 33
+   at NServiceBus.ProcessingStatisticsBehavior.Invoke(IIncomingPhysicalMessageContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Performance\Statistics\ProcessingStatisticsBehavior.cs:line 25
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\Incoming\TransportReceiveToPhysicalMessageProcessingConnector.cs:line 39
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 34
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 248
+2019-01-26 23:50:15.824 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '101'
+2019-01-26 23:50:15.811 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '101'
+2019-01-26 23:50:15.799 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '101'
+2019-01-26 23:50:44.408 INFO  NServiceBus.Transport.RabbitMQ.ChannelProvider Attempting to reconnect in 10 seconds.
+2019-01-26 23:56:32.717 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 23:56:33.263 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 23:56:45.327 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:56:45.340 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0015118
+2019-01-26 23:56:45.816 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '27'
+2019-01-26 23:56:57.615 WARN  NServiceBus.Transport.RabbitMQ.ChannelProvider Connection to the broker lost: Unexpected Exception
+2019-01-26 23:56:57.639 INFO  NServiceBus.Transport.RabbitMQ.ChannelProvider Attempting to reconnect in 10 seconds.
+2019-01-26 23:56:57.677 WARN  NServiceBus.Transport.RabbitMQ.MessagePumpConnectionFailedCircuitBreaker The circuit breaker for 'CountingStrings.Service MessagePump' is now in the armed state
+2019-01-26 23:57:06.097 WARN  NServiceBus.Transport.RabbitMQ.MessagePump Failed to acknowledge message 'ed34c5af-1633-4446-9b63-a9e1018a9de4' because the channel was closed. The message was returned to the queue.
+RabbitMQ.Client.Exceptions.AlreadyClosedException: Already closed: The AMQP operation was interrupted: AMQP close-reason, initiated by Library, code=541, text="Unexpected Exception", classId=0, methodId=0, cause=System.Net.Sockets.SocketException (110): Connection timed out
+   at RabbitMQ.Client.Impl.Frame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ReadFrame()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+   at RabbitMQ.Client.Impl.SessionBase.Transmit(Command cmd)
+   at RabbitMQ.Client.Impl.ModelBase.ModelSend(MethodBase method, ContentHeaderBase header, Byte[] body)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 266
+2019-01-26 23:57:07.650 INFO  NServiceBus.Transport.RabbitMQ.MessagePumpConnectionFailedCircuitBreaker The circuit breaker for 'CountingStrings.Service MessagePump' is now disarmed
+2019-01-26 23:57:07.668 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:57:07.669 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '27'
+2019-01-26 23:57:07.678 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002236
+2019-01-26 23:57:12.796 INFO  NServiceBus.Transport.RabbitMQ.ChannelProvider Connection to the broker reestablished successfully.
+2019-01-26 23:57:12.823 INFO  NServiceBus.RecoverabilityExecutor Immediate Retry is going to retry message '1a739c0c-6d98-4f32-9f23-a9e1018a9de0' because of an exception:
+RabbitMQ.Client.Exceptions.AlreadyClosedException: Already closed: The AMQP operation was interrupted: AMQP close-reason, initiated by Library, code=541, text="Unexpected Exception", classId=0, methodId=0, cause=System.Net.Sockets.SocketException (110): Connection timed out
+   at RabbitMQ.Client.Impl.Frame.ReadFrom(NetworkBinaryReader reader)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ReadFrame()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+   at RabbitMQ.Client.Framing.Impl.Connection.EnsureIsOpen()
+   at RabbitMQ.Client.Framing.Impl.Connection.CreateModel()
+   at NServiceBus.Transport.RabbitMQ.ConfirmsAwareChannel..ctor(IConnection connection, IRoutingTopology routingTopology, Boolean usePublisherConfirms) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Connection\ConfirmsAwareChannel.cs:line 15
+   at NServiceBus.Transport.RabbitMQ.ChannelProvider.GetPublishChannel() in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Connection\ChannelProvider.cs:line 68
+   at NServiceBus.Transport.RabbitMQ.MessageDispatcher.Dispatch(TransportOperations outgoingMessages, TransportTransaction transaction, ContextBag context) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Sending\MessageDispatcher.cs:line 18
+   at NServiceBus.ForkExtensions.Fork[TFromContext,TToContext,TForkContext](IForkConnector`3 forkConnector, TForkContext context) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\ForkExtensions.cs:line 13
+   at NServiceBus.TransportReceiveToPhysicalMessageProcessingConnector.Invoke(ITransportReceiveContext context, Func`2 next)
+   at NServiceBus.MainPipelineExecutor.Invoke(MessageContext messageContext) in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Pipeline\MainPipelineExecutor.cs:line 34
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Process(BasicDeliverEventArgs message) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 248
+2019-01-26 23:57:12.926 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:57:12.946 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001535
+2019-01-26 23:57:13.001 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '27'
+2019-01-26 23:57:23.008 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:57:23.018 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0003214
+2019-01-26 23:57:23.035 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '27'
+2019-01-26 23:57:33.044 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:57:33.052 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0004175
+2019-01-26 23:57:33.075 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '27'
+2019-01-26 23:57:43.074 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:57:43.086 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001594
+2019-01-26 23:57:43.119 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '27'
+2019-01-26 23:57:53.102 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:57:53.123 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001317
+2019-01-26 23:57:53.144 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '27'
+2019-01-26 23:58:03.153 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:58:03.162 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001990
+2019-01-26 23:58:03.192 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '27'
+2019-01-26 23:58:13.181 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:58:13.194 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001688
+2019-01-26 23:58:13.214 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '27'
+2019-01-26 23:58:23.220 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:58:23.233 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0007094
+2019-01-26 23:58:23.257 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '27'
+2019-01-26 23:58:33.274 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:58:33.286 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002825
+2019-01-26 23:58:33.323 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '27'
+2019-01-26 23:58:43.325 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:58:43.343 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0006442
+2019-01-26 23:58:43.355 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '27'
+2019-01-26 23:58:53.363 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:58:53.376 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001723
+2019-01-26 23:58:53.396 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '27'
+2019-01-26 23:59:03.399 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:59:03.416 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001682
+2019-01-26 23:59:03.440 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '27'
+2019-01-26 23:59:13.439 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:59:13.449 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002021
+2019-01-26 23:59:13.464 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '27'
+2019-01-26 23:59:23.475 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:59:23.486 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0002142
+2019-01-26 23:59:23.501 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '27'
+2019-01-26 23:59:33.509 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:59:33.519 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0006024
+2019-01-26 23:59:33.531 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '27'
+2019-01-26 23:59:43.538 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:59:43.557 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0003294
+2019-01-26 23:59:43.585 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '27'
+2019-01-26 23:59:53.576 INFO  NServiceBus.DefaultScheduler Start executing scheduled task named 'Program'.
+2019-01-26 23:59:53.592 INFO  NServiceBus.DefaultScheduler Scheduled task 'Program' run for 00:00:00.0001727
+2019-01-26 23:59:53.625 INFO  CountingStrings.Service.Handlers.RefreshCalculationsHandler RefreshCalculations. ProcessId: '27'

@@ -1,0 +1,80 @@
+﻿2019-01-26 11:09:38.730 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 11:09:39.323 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 11:09:39.953 FATAL NServiceBus.ReceiveComponent Receiver Main failed to start.
+RabbitMQ.Client.Exceptions.OperationInterruptedException: The AMQP operation was interrupted: AMQP close-reason, initiated by Peer, code=404, text="NOT_FOUND - no queue 'CountingStrings.API' in vhost '/'", classId=60, methodId=20, cause=
+   at RabbitMQ.Client.Impl.SimpleBlockingRpcContinuation.GetReply(TimeSpan timeout)
+   at RabbitMQ.Client.Impl.ModelBase.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at RabbitMQ.Client.Impl.AutorecoveringModel.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Start(PushRuntimeSettings limitations) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 111
+   at NServiceBus.TransportReceiver.Start() in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Transports\TransportReceiver.cs:line 47
+   at NServiceBus.ReceiveComponent.Start() in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Receiving\ReceiveComponent.cs:line 90
+2019-01-26 11:12:57.924 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 11:12:58.838 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 11:12:59.539 FATAL NServiceBus.ReceiveComponent Receiver Main failed to start.
+RabbitMQ.Client.Exceptions.OperationInterruptedException: The AMQP operation was interrupted: AMQP close-reason, initiated by Peer, code=404, text="NOT_FOUND - no queue 'CountingStrings.API' in vhost '/'", classId=60, methodId=20, cause=
+   at RabbitMQ.Client.Impl.SimpleBlockingRpcContinuation.GetReply(TimeSpan timeout)
+   at RabbitMQ.Client.Impl.ModelBase.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at RabbitMQ.Client.Impl.AutorecoveringModel.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Start(PushRuntimeSettings limitations) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 111
+   at NServiceBus.TransportReceiver.Start() in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Transports\TransportReceiver.cs:line 47
+   at NServiceBus.ReceiveComponent.Start() in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Receiving\ReceiveComponent.cs:line 90
+2019-01-26 11:15:15.431 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 11:15:16.150 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 11:15:16.725 FATAL NServiceBus.ReceiveComponent Receiver Main failed to start.
+RabbitMQ.Client.Exceptions.OperationInterruptedException: The AMQP operation was interrupted: AMQP close-reason, initiated by Peer, code=404, text="NOT_FOUND - no queue 'CountingStrings.API' in vhost '/'", classId=60, methodId=20, cause=
+   at RabbitMQ.Client.Impl.SimpleBlockingRpcContinuation.GetReply(TimeSpan timeout)
+   at RabbitMQ.Client.Impl.ModelBase.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at RabbitMQ.Client.Impl.AutorecoveringModel.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Start(PushRuntimeSettings limitations) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 111
+   at NServiceBus.TransportReceiver.Start() in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Transports\TransportReceiver.cs:line 47
+   at NServiceBus.ReceiveComponent.Start() in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Receiving\ReceiveComponent.cs:line 90
+2019-01-26 11:18:04.610 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 11:18:05.122 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 11:18:05.735 FATAL NServiceBus.ReceiveComponent Receiver Main failed to start.
+RabbitMQ.Client.Exceptions.OperationInterruptedException: The AMQP operation was interrupted: AMQP close-reason, initiated by Peer, code=404, text="NOT_FOUND - no queue 'CountingStrings.API' in vhost '/'", classId=60, methodId=20, cause=
+   at RabbitMQ.Client.Impl.SimpleBlockingRpcContinuation.GetReply(TimeSpan timeout)
+   at RabbitMQ.Client.Impl.ModelBase.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at RabbitMQ.Client.Impl.AutorecoveringModel.BasicConsume(String queue, Boolean autoAck, String consumerTag, Boolean noLocal, Boolean exclusive, IDictionary`2 arguments, IBasicConsumer consumer)
+   at NServiceBus.Transport.RabbitMQ.MessagePump.Start(PushRuntimeSettings limitations) in C:\BuildAgent\work\15dcdbe5f88af6ed\src\NServiceBus.Transport.RabbitMQ\Receiving\MessagePump.cs:line 111
+   at NServiceBus.TransportReceiver.Start() in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Transports\TransportReceiver.cs:line 47
+   at NServiceBus.ReceiveComponent.Start() in C:\BuildAgent\work\ed946b9f0e4aae01\src\NServiceBus.Core\Receiving\ReceiveComponent.cs:line 90
+2019-01-26 11:20:51.724 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 11:20:52.388 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 11:30:32.441 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 11:30:33.147 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 11:35:17.614 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 11:35:18.311 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 11:51:49.982 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 11:51:50.568 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 12:01:22.410 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 12:01:23.075 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 12:14:03.811 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 12:14:04.436 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 12:48:45.320 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 12:48:46.031 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 23:29:39.453 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 23:29:40.140 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 23:39:46.790 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 23:39:47.452 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 23:45:02.389 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 23:45:02.938 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 23:49:23.411 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 23:49:23.980 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
+2019-01-26 23:56:31.536 INFO  DefaultFactory Logging to '/app/bin/Debug/netcoreapp2.1/' with level Info
+2019-01-26 23:56:32.179 INFO  NServiceBus.LicenseManager No valid license could be found. Falling back to trial license with start date '2019-01-26'.
+
