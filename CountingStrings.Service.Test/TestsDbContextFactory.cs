@@ -1,4 +1,4 @@
-﻿using CountingStrings.Service.Data.Contexts;
+﻿using CountingStrings.Service.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 

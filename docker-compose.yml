@@ -40,9 +40,23 @@ services:
         networks:
             - new
         volumes:
-            - ms-sqlserver-data-v2:/var/opt/mssql
+            - ms-sqlserver-data-v20:/var/opt/mssql
+    countingstrings.worker:
+        image: ${DOCKER_REGISTRY}countingstringsworker
+        build:
+            context: .
+            dockerfile: CountingStrings.Worker/Dockerfile
+        env_file:
+            - 'variables.env' 
+        networks:
+            - new
+        depends_on: 
+            - rabbitmq
+            - db 
+
 networks:
     new:
 volumes:
-    ms-sqlserver-data-v2:
+    ms-sqlserver-data-v20:
         driver: local 
+

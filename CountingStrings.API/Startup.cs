@@ -1,11 +1,13 @@
-﻿using CountingStrings.API.Contract;
-using CountingStrings.API.DataAccess.Repositories;
+﻿using System;
+using CountingStrings.API.Contract;
+using CountingStrings.API.Data.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NServiceBus;
+using Swashbuckle.AspNetCore.Examples;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace CountingStrings.API
@@ -25,12 +27,11 @@ namespace CountingStrings.API
             #region Bus
 
             var endpointConfiguration = new EndpointConfiguration("CountingStrings.API");
+            endpointConfiguration.SendOnly();
 
             var transport = endpointConfiguration.UseTransport<RabbitMQTransport>();
             transport.ConnectionString("host=rabbitmq");
             transport.UseConventionalRoutingTopology();
-
-            endpointConfiguration.SendOnly();
 
             var routing = transport.Routing();
             routing.RouteToEndpoint(typeof(OpenSession).Assembly, "CountingStrings.Service");
@@ -58,16 +59,17 @@ namespace CountingStrings.API
                         Url = "https://www.linkedin.com/in/cristianperezmatturro/"
                     }
                 });
+
+                c.OperationFilter<ExamplesOperationFilter>();
             });
 
             #endregion
 
-            services.AddTransient<IInventoryRepository, InventoryRepository>();
+            services.AddTransient<ICountingStringsRepository, CountingStringsRepository>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -79,6 +81,18 @@ namespace CountingStrings.API
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "CountingStrings v1");
+            });
+
+            app.Use(async (ctx, next) =>
+            {
+                var bus = ctx.RequestServices.GetService<IMessageSession>();
+                await bus.Send(new LogRequest
+                {
+                    Id = Guid.NewGuid(),
+                    RequestDate = DateTime.UtcNow
+                });
+
+                await next();
             });
 
             app.UseMvc();

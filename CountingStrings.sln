@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CountingStrings.API", "CountingStrings.API\CountingStrings.API.csproj", "{1AAD67B4-E9F1-4978-B67B-5476CCDC7439}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CountingStrings.API.DataAccess", "CountingStrings.API.DataAccess\CountingStrings.API.DataAccess.csproj", "{1497E595-F62C-4227-9D12-7B0DBE792367}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CountingStrings.Service", "CountingStrings.Service\CountingStrings.Service.csproj", "{E7C0A6ED-D406-4B64-9A6E-8E363287007A}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{5222B9A1-8769-442E-BAB8-13A96E001A34}"
@@ -16,6 +14,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountingStrings.API.Contract", "CountingStrings.API.Contract\CountingStrings.API.Contract.csproj", "{BD320AC1-C303-491C-9700-E54CAD324E3C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountingStrings.Service.Test", "CountingStrings.Service.Test\CountingStrings.Service.Test.csproj", "{866A9D5C-3DFC-43A0-9630-1DA20E27E32B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountingStrings.API.Data", "CountingStrings.API.Data\CountingStrings.API.Data.csproj", "{A234C629-3695-4704-8198-ABC50F89B32B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountingStrings.Worker.Test", "CountingStrings.Worker.Test\CountingStrings.Worker.Test.csproj", "{3B91A44B-F359-4730-8121-933D4A419319}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountingStrings.Worker", "CountingStrings.Worker\CountingStrings.Worker.csproj", "{C358E0B0-DFF7-4015-B3C6-618C6C3EF824}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +31,6 @@ Global
 		{1AAD67B4-E9F1-4978-B67B-5476CCDC7439}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AAD67B4-E9F1-4978-B67B-5476CCDC7439}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AAD67B4-E9F1-4978-B67B-5476CCDC7439}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1497E595-F62C-4227-9D12-7B0DBE792367}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1497E595-F62C-4227-9D12-7B0DBE792367}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1497E595-F62C-4227-9D12-7B0DBE792367}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1497E595-F62C-4227-9D12-7B0DBE792367}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E7C0A6ED-D406-4B64-9A6E-8E363287007A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E7C0A6ED-D406-4B64-9A6E-8E363287007A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7C0A6ED-D406-4B64-9A6E-8E363287007A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +51,18 @@ Global
 		{866A9D5C-3DFC-43A0-9630-1DA20E27E32B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{866A9D5C-3DFC-43A0-9630-1DA20E27E32B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{866A9D5C-3DFC-43A0-9630-1DA20E27E32B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A234C629-3695-4704-8198-ABC50F89B32B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A234C629-3695-4704-8198-ABC50F89B32B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A234C629-3695-4704-8198-ABC50F89B32B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A234C629-3695-4704-8198-ABC50F89B32B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B91A44B-F359-4730-8121-933D4A419319}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B91A44B-F359-4730-8121-933D4A419319}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B91A44B-F359-4730-8121-933D4A419319}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B91A44B-F359-4730-8121-933D4A419319}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C358E0B0-DFF7-4015-B3C6-618C6C3EF824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C358E0B0-DFF7-4015-B3C6-618C6C3EF824}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C358E0B0-DFF7-4015-B3C6-618C6C3EF824}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C358E0B0-DFF7-4015-B3C6-618C6C3EF824}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -10,6 +10,9 @@ namespace CountingStrings.Service.Data.Mappings
         {
             CreateMap<OpenSession, Session>()
                 .ForMember(target => target.Id, opt => opt.MapFrom(s => s.SessionId));
+
+            CreateMap<CloseSession, Session>()
+                .ForMember(target => target.Id, opt => opt.MapFrom(s => s.SessionId));
         }
     }
 }

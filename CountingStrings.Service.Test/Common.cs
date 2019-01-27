@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using CountingStrings.Service.Data.Contexts;
+using CountingStrings.Service.Data;
 using CountingStrings.Service.Data.Mappings;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;

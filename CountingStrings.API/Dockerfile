@@ -5,8 +5,8 @@ EXPOSE 80
 FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /src
 COPY CountingStrings.API/CountingStrings.API.csproj CountingStrings.API/
-COPY CountingStrings.API.DataAccess/CountingStrings.API.DataAccess.csproj CountingStrings.API.DataAccess/
-COPY CountingStrings.API.Bus/CountingStrings.API.Bus.csproj CountingStrings.API.Bus/
+COPY CountingStrings.API.Contract/CountingStrings.API.Contract.csproj CountingStrings.API.Contract/
+COPY CountingStrings.API.Data/CountingStrings.API.Data.csproj CountingStrings.API.Data/
 RUN dotnet restore CountingStrings.API/CountingStrings.API.csproj
 COPY . .
 WORKDIR /src/CountingStrings.API

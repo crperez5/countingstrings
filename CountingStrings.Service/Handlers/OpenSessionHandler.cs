@@ -4,7 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using CountingStrings.API.Contract;
-using CountingStrings.Service.Data.Contexts;
+using CountingStrings.Service.Data;
+using CountingStrings.Service.Data.Models;
 using CountingStrings.Service.Extensions;
 using Microsoft.EntityFrameworkCore;
 using NServiceBus;
@@ -28,14 +29,29 @@ namespace CountingStrings.Service.Handlers
         {
             Log.Info($"OpenSession. SessionId '{message.SessionId}', ProcessId: '{Process.GetCurrentProcess().Id}'");
 
-            var session = _mapper.Map<Data.Models.Session>(message);
+            var session = _mapper.Map<Session>(message);
 
-            await this._db.Sessions.AddAsync(session);
+            using (var transaction = await _db.Database.BeginTransactionAsync())
+            {
+                try
+                {
+                    await AddSession(session);
 
-            await this._db.SaveChangesAsync();
+                    await UpdateCounters();
 
+                    transaction.Commit();
+                }
+                catch (Exception)
+                {
+                    transaction.Rollback();
+                    throw;
+                }
+            }
+        }
+
+        private async Task UpdateCounters()
+        {
             var counterSaved = false;
-
             var sessionCounters = await this._db.SessionCounts.SingleAsync();
             sessionCounters.NumOpen += 1;
 
@@ -43,26 +59,30 @@ namespace CountingStrings.Service.Handlers
             {
                 try
                 {
-                    await this._db.SaveChangesAsync();
+                    await _db.SaveChangesAsync();
                     counterSaved = true;
                 }
-                catch (Exception ex)
+                catch (Exception ex) when (ex.IsConcurrencyException())
                 {
-                    if (!ex.IsConcurrencyProblem())
-                    {
-                        throw;
-                    }
-
-                    var dbUpdateException = (DbUpdateException)ex;
-                    var entry = dbUpdateException.Entries.First();
-                    var proposedValues = entry.CurrentValues;
-                    var databaseValues = entry.GetDatabaseValues();
-
-                    proposedValues["NumOpen"] = (int)databaseValues["NumOpen"] + 1;
-
-                    entry.OriginalValues.SetValues(databaseValues);
+                    ResolveCounterConflicts(ex);
                 }
             }
+        }
+
+        private async Task AddSession(Session session)
+        {
+            await this._db.Sessions.AddAsync(session);
+            await this._db.SaveChangesAsync();
+        }
+
+        private static void ResolveCounterConflicts(Exception ex)
+        {
+            var dbUpdateException = (DbUpdateException)ex;
+            var entry = dbUpdateException.Entries.First();
+            var proposedValues = entry.CurrentValues;
+            var databaseValues = entry.GetDatabaseValues();
+            proposedValues["NumOpen"] = (int)databaseValues["NumOpen"] + 1;
+            entry.OriginalValues.SetValues(databaseValues);
         }
     }
 }

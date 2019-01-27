@@ -4,14 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using CountingStrings.API.Contract;
-using CountingStrings.Service.Data.Contexts;
+using CountingStrings.Service.Data;
 using CountingStrings.Service.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
 
 namespace CountingStrings.Service.Test.Handlers
 {
-    public class OpenSessionHandler
+    public class OpenSessionHandler : IDisposable
     {
         private readonly CountingStringsContext _context;
         private readonly IMapper _mapper;
@@ -28,21 +28,6 @@ namespace CountingStrings.Service.Test.Handlers
 
             PopulateDatabase();
         }
-
-        private void PopulateDatabase()
-        {
-            _context.Database.Migrate();
-
-            _context.SessionCounts.Add(new SessionCounts
-            {
-                Id = Guid.Parse("A9EF096F-9FB5-4408-B3FB-FF7F577D7C80"),
-                NumOpen = 0,
-                NumClose = 0
-            });
-
-            _context.SaveChanges();
-        }
-
 
         [Fact]
         public async Task OpenSession()
@@ -112,6 +97,20 @@ namespace CountingStrings.Service.Test.Handlers
         public void Dispose()
         {
             _context.Database.EnsureDeleted();
+        }
+
+        private void PopulateDatabase()
+        {
+            _context.Database.Migrate();
+
+            _context.SessionCounts.Add(new SessionCount
+            {
+                Id = Guid.Parse("A9EF096F-9FB5-4408-B3FB-FF7F577D7C80"),
+                NumOpen = 0,
+                NumClose = 0
+            });
+
+            _context.SaveChanges();
         }
     }
 }

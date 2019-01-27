@@ -2,7 +2,7 @@
 
 namespace CountingStrings.Service.Data.Models
 {
-    public class SessionCounts
+    public class SessionCount
     {
         public Guid Id { get; set; }
         public int NumOpen { get; set; }
