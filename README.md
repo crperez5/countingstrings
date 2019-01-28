@@ -24,12 +24,7 @@ You need to have Docker installed in your machine.
 
 ## Running the tests
 
-The projects CountingStrings.Service.Test and CountingStrings.Worker.Test implement tests for the most important workflows. These are xunit tests that can be run from Visual Studio Test Explorer or directly from the command line. The tests rely on EFCore and Migrations to spawn a fresh localdb database and for each test, the db gets populated with the required data. Once the test is completed, the database gets deleted.
-
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+The projects CountingStrings.Service.Test and CountingStrings.Worker.Test implement tests for the most important workflows. These are xunit tests that can be run from Visual Studio Test Explorer or directly from the command line. The tests rely on EFCore and Migrations to spawn a fresh localdb database. For each test, the db gets populated with the required data. Once the test is completed, the database is deleted.
 
 ## Built With
 
