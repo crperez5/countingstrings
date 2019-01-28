@@ -13,7 +13,7 @@ namespace CountingStrings.Service.Handlers
 {
     public class LogRequestHandler : IHandleMessages<LogRequest>
     {
-        private static readonly ILog Log = LogManager.GetLogger<CloseSessionHandler>();
+        private static readonly ILog Log = LogManager.GetLogger<LogRequestHandler>();
 
         private readonly CountingStringsContext _db;
 

@@ -13,8 +13,12 @@ namespace CountingStrings.Service
 {
     static class Program
     {
+        static SemaphoreSlim semaphore = new SemaphoreSlim(0);
+
         static void Main(string[] args)
         {
+            Thread.Sleep(120000);
+
             var configuration = GetServiceConfiguration();
 
             var services = new ServiceCollection();
@@ -26,26 +30,6 @@ namespace CountingStrings.Service
 
             services.AddAutoMapper(x => x.AddProfile(new SessionMapping()));
 
-            var endpoint = GetConfiguredEndpoint(services);
-
-            Console.Read();
-            endpoint.Stop().ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        private static IConfigurationRoot GetServiceConfiguration()
-        {
-            var environmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile($"appsettings.json", true, true)
-                .AddJsonFile($"appsettings.{environmentName}.json", true, true)
-                .AddEnvironmentVariables();
-            var configuration = builder.Build();
-            return configuration;
-        }
-
-        private static IEndpointInstance GetConfiguredEndpoint(IServiceCollection services)
-        {
             var endpointConfiguration = new EndpointConfiguration("CountingStrings.Service");
 
             var transport = endpointConfiguration.UseTransport<RabbitMQTransport>();
@@ -60,18 +44,21 @@ namespace CountingStrings.Service
                     customizations.ExistingServices(services);
                 });
 
-            while (true)
-            {
-                try
-                {
-                    var endpoint = Endpoint.Start(endpointConfiguration).GetAwaiter().GetResult();
-                    return endpoint;
-                }
-                catch (Exception ex)
-                {
-                    Thread.Sleep(TimeSpan.FromMinutes(2));
-                }
-            }
+            Endpoint.Start(endpointConfiguration).GetAwaiter().GetResult();
+
+            semaphore.Wait();
+        }
+
+        private static IConfigurationRoot GetServiceConfiguration()
+        {
+            var environmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile($"appsettings.json", true, true)
+                .AddJsonFile($"appsettings.{environmentName}.json", true, true)
+                .AddEnvironmentVariables();
+            var configuration = builder.Build();
+            return configuration;
         }
     }
 }

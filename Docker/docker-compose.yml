@@ -5,7 +5,7 @@ services:
         networks:
             - new
         volumes:
-            - ms-sqlserver-data:/var/opt/mssql
+            - ms-sqlserver-data-drive:/var/opt/mssql
     rabbitmq:
         image: "rabbitmq:3-management" 
         ports:
@@ -43,6 +43,6 @@ services:
 networks:
     new:
 volumes:
-    ms-sqlserver-data:
+    ms-sqlserver-data-drive:
         driver: local 
 

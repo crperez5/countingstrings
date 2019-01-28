@@ -25,6 +25,7 @@ namespace CountingStrings.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            Thread.Sleep(120000);
             #region Bus
 
             var endpointConfiguration = new EndpointConfiguration("CountingStrings.API");
@@ -37,20 +38,8 @@ namespace CountingStrings.API
             var routing = transport.Routing();
             routing.RouteToEndpoint(typeof(OpenSession).Assembly, "CountingStrings.Service");
 
-            var started = false;
-            while (!started)
-            {
-                try
-                {
-                    var endpoint = Endpoint.Start(endpointConfiguration).GetAwaiter().GetResult();
-                    services.AddSingleton<IMessageSession>(endpoint);
-                    started = true;
-                }
-                catch (Exception ex)
-                {
-                    Thread.Sleep(TimeSpan.FromMinutes(2));
-                }
-            }
+            var endpoint = Endpoint.Start(endpointConfiguration).GetAwaiter().GetResult();
+            services.AddSingleton<IMessageSession>(endpoint);
 
             #endregion
 

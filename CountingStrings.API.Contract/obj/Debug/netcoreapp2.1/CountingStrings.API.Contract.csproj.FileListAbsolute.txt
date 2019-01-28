@@ -1,9 +1,0 @@
-C:\CountingStrings\CountingStrings.API.Contract\bin\Debug\netcoreapp2.1\CountingStrings.API.Contract.deps.json
-C:\CountingStrings\CountingStrings.API.Contract\bin\Debug\netcoreapp2.1\CountingStrings.API.Contract.dll
-C:\CountingStrings\CountingStrings.API.Contract\obj\Debug\netcoreapp2.1\CountingStrings.API.Contract.csproj.CoreCompileInputs.cache
-C:\CountingStrings\CountingStrings.API.Contract\obj\Debug\netcoreapp2.1\CountingStrings.API.Contract.AssemblyInfoInputs.cache
-C:\CountingStrings\CountingStrings.API.Contract\obj\Debug\netcoreapp2.1\CountingStrings.API.Contract.AssemblyInfo.cs
-C:\CountingStrings\CountingStrings.API.Contract\bin\Debug\netcoreapp2.1\CountingStrings.API.Contract.pdb
-C:\CountingStrings\CountingStrings.API.Contract\obj\Debug\netcoreapp2.1\CountingStrings.API.Contract.dll
-C:\CountingStrings\CountingStrings.API.Contract\obj\Debug\netcoreapp2.1\CountingStrings.API.Contract.pdb
-C:\CountingStrings\CountingStrings.API.Contract\obj\Debug\netcoreapp2.1\CountingStrings.API.Contract.csprojAssemblyReference.cache

@@ -13,8 +13,12 @@ namespace CountingStrings.Worker
 {
     static class Program
     {
+        static SemaphoreSlim semaphore = new SemaphoreSlim(0);
+
         static void Main(string[] args)
         {
+            Thread.Sleep(120000);
+
             var configuration = GetServiceConfiguration();
 
             var services = new ServiceCollection();
@@ -26,30 +30,6 @@ namespace CountingStrings.Worker
 
             services.AddAutoMapper(x => x.AddProfile(new SessionMapping()));
 
-            var endpoint = GetConfiguredEndpoint(services);
-
-            endpoint.ScheduleEvery(TimeSpan.FromSeconds(10),
-                    pipelineContext => pipelineContext.SendLocal(new RefreshCalculations())).ConfigureAwait(false)
-                .GetAwaiter().GetResult();
-
-            Console.Read();
-            endpoint.Stop().ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        private static IConfigurationRoot GetServiceConfiguration()
-        {
-            var environmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile($"appsettings.json", true, true)
-                .AddJsonFile($"appsettings.{environmentName}.json", true, true)
-                .AddEnvironmentVariables();
-            var configuration = builder.Build();
-            return configuration;
-        }
-
-        private static IEndpointInstance GetConfiguredEndpoint(IServiceCollection services)
-        {
             var endpointConfiguration = new EndpointConfiguration("CountingStrings.Worker");
 
             var transport = endpointConfiguration.UseTransport<RabbitMQTransport>();
@@ -64,18 +44,25 @@ namespace CountingStrings.Worker
                     customizations.ExistingServices(services);
                 });
 
-            while (true)
-            {
-                try
-                {
-                    var endpoint = Endpoint.Start(endpointConfiguration).GetAwaiter().GetResult();
-                    return endpoint;
-                }
-                catch (Exception ex)
-                {
-                    Thread.Sleep(TimeSpan.FromMinutes(2));
-                }
-            }
+            var endpoint = Endpoint.Start(endpointConfiguration).GetAwaiter().GetResult();
+
+            endpoint.ScheduleEvery(TimeSpan.FromSeconds(10),
+                    pipelineContext => pipelineContext.SendLocal(new RefreshCalculations())).ConfigureAwait(false)
+                .GetAwaiter().GetResult();
+
+            semaphore.Wait();
+        }
+
+        private static IConfigurationRoot GetServiceConfiguration()
+        {
+            var environmentName = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile($"appsettings.json", true, true)
+                .AddJsonFile($"appsettings.{environmentName}.json", true, true)
+                .AddEnvironmentVariables();
+            var configuration = builder.Build();
+            return configuration;
         }
     }
 }
