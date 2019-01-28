@@ -37,7 +37,7 @@ Retrieves materialized/calculated data from the database and handles it over to 
 ### Service (CountingStrings.Service)
 Handles the commands. Stores in the database all the events that happen in the system. Updates Session counters (number of open sessions, number of closed sessions) and amount of requests counter.
 
-### Worker
+### Worker (CountingStrings.Worker)
 Background service that wakes up every 30 seconds, checks for new words that have been submitted and performs the heavy calculations (words per session, word frequency).
 
 ## Built With
