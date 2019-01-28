@@ -37,4 +37,4 @@ The projects CountingStrings.Service.Test and CountingStrings.Worker.Test implem
 
 * **Cristian Perez Matturro** 
 
-Check out my linkedin page: https://www.linkedin.com/in/cristianperezmatturro/) 
+Check out my linkedin page: https://www.linkedin.com/in/cristianperezmatturro/
