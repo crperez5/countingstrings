@@ -30,14 +30,14 @@ The projects CountingStrings.Service.Test and CountingStrings.Worker.Test implem
 
 The solution is composed of three apps/services:
 
-# Rest API (CountingStrings.API)
+### Rest API (CountingStrings.API)
 Handles user requests. Sends commands to the Service (OpenSession, CloseSession, SubmitWords, LogRequest, etc).
 Retrieves materialized/calculated data from the database and handles it over to the user.
 
-# Service (CountingStrings.Service)
+### Service (CountingStrings.Service)
 Handles the commands. Stores in the database all the events that happen in the system. Updates Session counters (number of open sessions, number of closed sessions) and amount of requests counter.
 
-# Worker
+### Worker
 Background service that wakes up every 30 seconds, checks for new words that have been submitted and performs the heavy calculations (words per session, word frequency).
 
 ## Built With
