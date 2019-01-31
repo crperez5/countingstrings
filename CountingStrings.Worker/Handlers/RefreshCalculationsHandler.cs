@@ -30,95 +30,66 @@ namespace CountingStrings.Worker.Handlers
 
             var currentJob = new WorkerJob() { ProcessId = Process.GetCurrentProcess().Id, StartDate = DateTime.UtcNow };
 
-            await _db.WorkerJobs.AddAsync(currentJob);
-
-            await _db.SaveChangesAsync();
-
             var lastJob = await _db.WorkerJobs.OrderByDescending(o => o.EndDate).FirstOrDefaultAsync();
 
-            var baselineDate = lastJob?.EndDate ?? DateTime.MinValue;
+            var lastJobEndDate = lastJob?.EndDate ?? DateTime.MinValue;
 
-            var unprocessedSessionWords = await _db.SessionWords.Where(w => w.DateCreated > baselineDate).ToListAsync();
+            var checkpoint = DateTime.UtcNow;
+
+            var unprocessedSessionWords = await _db.SessionWords.Where(w => w.DateCreated > lastJobEndDate).ToListAsync();
+
+            Log.Info($"{unprocessedSessionWords.Count} new words found.");
 
             await CalculateWordsPerSession(unprocessedSessionWords);
 
             await CalculateWordFrequency(unprocessedSessionWords);
 
+            Log.Info($"Saving checkpoint. Next time will process words from date '{checkpoint:s}'.");
             currentJob.EndDate = DateTime.UtcNow;
-
+            await _db.WorkerJobs.AddAsync(currentJob);
             await _db.SaveChangesAsync();
         }
 
         private async Task CalculateWordsPerSession(List<SessionWord> unprocessedSessionWords)
         {
-            var toBePurgedSessionWordCounts = new List<SessionWordCount>();
-
-            foreach (var unprocessedSessionWord in unprocessedSessionWords.GroupBy(g => new { g.SessionId, g.Word }))
+            foreach (var unprocessedWord in unprocessedSessionWords.GroupBy(g => new { g.SessionId, g.Word }))
             {
-                var sessionWordCounts = await _db.SessionWordCounts.Where(c =>
-                        c.SessionId == unprocessedSessionWord.Key.SessionId && c.Word == unprocessedSessionWord.Key.Word)
-                    .ToListAsync();
+                var currentCounts = await _db.SessionWordCounts.Where(s =>
+                    s.SessionId == unprocessedWord.Key.SessionId && s.Word == unprocessedWord.Key.Word).ToListAsync();
+                _db.SessionWordCounts.RemoveRange(currentCounts);
 
-                toBePurgedSessionWordCounts.AddRange(sessionWordCounts);
+                var ocurrences = await _db.SessionWords.Where(s =>
+                    s.SessionId == unprocessedWord.Key.SessionId && s.Word == unprocessedWord.Key.Word).ToListAsync();
 
-                if (!sessionWordCounts.Any())
+                await _db.SessionWordCounts.AddAsync(new SessionWordCount
                 {
-                    await _db.SessionWordCounts.AddAsync(new SessionWordCount
-                    {
-                        SessionId = unprocessedSessionWord.Key.SessionId,
-                        Word = unprocessedSessionWord.Key.Word,
-                        Count = unprocessedSessionWord.Count()
-                    });
-                }
-                else
-                {
-                    var current = sessionWordCounts.OrderByDescending(o => o.DateCreated).First();
-                    await _db.SessionWordCounts.AddAsync(new SessionWordCount
-                    {
-                        SessionId = unprocessedSessionWord.Key.SessionId,
-                        Word = unprocessedSessionWord.Key.Word,
-                        Count = current.Count + unprocessedSessionWord.Count()
-                    });
-                }
+                    SessionId = unprocessedWord.Key.SessionId,
+                    Word = unprocessedWord.Key.Word,
+                    Count = ocurrences.Count
+                });
             }
-
-            _db.SessionWordCounts.RemoveRange(toBePurgedSessionWordCounts);
+            await _db.SaveChangesAsync();
         }
 
         private async Task CalculateWordFrequency(List<SessionWord> unprocessedSessionWords)
         {
-            var tobePurgedWordDateCounts = new List<WordDateCount>();
-
             foreach (var unprocessedSessionWord in unprocessedSessionWords.GroupBy(g => new { g.Word, g.DateCreated.Date }))
             {
-                var wordDateCounts = await _db.WordDateCounts.Where(c =>
-                        c.Word == unprocessedSessionWord.Key.Word && c.Date.Date == unprocessedSessionWord.Key.Date)
-                    .ToListAsync();
+                var currentCounts = await _db.WordDateCounts.Where(s =>
+                    s.Word == unprocessedSessionWord.Key.Word && s.DateCreated.Date == unprocessedSessionWord.Key.Date.Date).ToListAsync();
+                _db.WordDateCounts.RemoveRange(currentCounts);
 
-                tobePurgedWordDateCounts.AddRange(wordDateCounts);
+                var ocurrences = await _db.SessionWords.Where(s =>
+                    s.Word == unprocessedSessionWord.Key.Word && s.DateCreated == unprocessedSessionWord.Key.Date.Date).ToListAsync();
 
-                if (!wordDateCounts.Any())
+                await _db.WordDateCounts.AddAsync(new WordDateCount
                 {
-                    await _db.WordDateCounts.AddAsync(new WordDateCount
-                    {
-                        Word = unprocessedSessionWord.Key.Word,
-                        Date = unprocessedSessionWord.Key.Date,
-                        Count = unprocessedSessionWord.Count()
-                    });
-                }
-                else
-                {
-                    var current = wordDateCounts.OrderByDescending(o => o.DateCreated).First();
-                    await _db.WordDateCounts.AddAsync(new WordDateCount
-                    {
-                        Word = unprocessedSessionWord.Key.Word,
-                        Date = unprocessedSessionWord.Key.Date,
-                        Count = current.Count + unprocessedSessionWord.Count()
-                    });
-                }
+                    Word = unprocessedSessionWord.Key.Word,
+                    Date = unprocessedSessionWord.Key.Date,
+                    Count = ocurrences.Count
+                });
             }
-            _db.WordDateCounts.RemoveRange(tobePurgedWordDateCounts);
-
+            await _db.SaveChangesAsync();
         }
     }
 }
