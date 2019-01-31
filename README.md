@@ -24,12 +24,21 @@ You need to have Docker installed in your machine.
 
 ## Running the tests
 
-The projects CountingStrings.Service.Test and CountingStrings.Worker.Test implement tests for the most important workflows. These are xunit tests that can be run from Visual Studio Test Explorer or directly from the command line. The tests rely on EFCore and Migrations to spawn a fresh localdb database and for each test, the db gets populated with the required data. Once the test is completed, the database gets deleted.
+The projects CountingStrings.Service.Test and CountingStrings.Worker.Test implement tests for the most important workflows. These are xunit tests that can be run from Visual Studio Test Explorer or directly from the command line. The tests rely on EFCore and Migrations to spawn a fresh localdb database. For each test, the db gets populated with the required data. Once the test is completed, the database is deleted.
 
+## Project organization
 
-## Deployment
+The solution is composed of three apps/services:
 
-Add additional notes about how to deploy this on a live system
+### Rest API (CountingStrings.API)
+Handles user requests. Sends commands to the Service (OpenSession, CloseSession, SubmitWords, LogRequest, etc).
+Retrieves materialized/calculated data from the database and handles it over to the user.
+
+### Service (CountingStrings.Service)
+Handles the commands. Stores in the database all the events that happen in the system. Updates Session counters (number of open sessions, number of closed sessions) and amount of requests counter.
+
+### Worker (CountingStrings.Worker)
+Background service that wakes up every 30 seconds, checks for new words that have been submitted and performs the heavy calculations (words per session, word frequency).
 
 ## Built With
 
@@ -42,4 +51,4 @@ Add additional notes about how to deploy this on a live system
 
 * **Cristian Perez Matturro** 
 
-Check out my linkedin page: https://www.linkedin.com/in/cristianperezmatturro/) 
+Check out my linkedin page: https://www.linkedin.com/in/cristianperezmatturro/
