@@ -1,1 +1,1 @@
-./SqlCmdStartup.sh $1 & /opt/mssql/bin/sqlservr
+./SqlCmdStartup.sh & /opt/mssql/bin/sqlservr

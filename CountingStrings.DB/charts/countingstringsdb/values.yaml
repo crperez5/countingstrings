@@ -2,6 +2,7 @@ acceptEula:
   value: "y"
 edition:
   value: Express
+sapassword: 1991836789cP.1
 collation: SQL_Latin1_General_CP1_CI_AS
 lcid: 1033
 hadr: 0
