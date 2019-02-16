@@ -1,0 +1,37 @@
+kind: helm-release
+apiVersion: 1.1
+build:
+  context: ..
+  dockerfile: Dockerfile
+install:
+  chart: charts\countingstringsservice
+  values:
+  - values.dev.yaml?
+  - secrets.dev.yaml?
+  set:
+    replicaCount: 1
+    image:
+      repository: countingstringsservice
+      tag: $(tag)
+      pullPolicy: Never
+    ingress:
+      annotations:
+        kubernetes.io/ingress.class: traefik-azds
+      hosts:
+      # This expands to [space.s.]countingstringsservice.<guid>.<region>.aksapp.io
+      - $(spacePrefix)countingstringsservice$(hostSuffix)
+configurations:
+  develop:
+    build:
+      dockerfile: Dockerfile.develop
+      useGitIgnore: true
+      args:
+        BUILD_CONFIGURATION: ${BUILD_CONFIGURATION:-Debug}
+    container:
+      sync:
+      - "!**/*.{sln,csproj}"
+      command: [dotnet, run, --no-restore, --no-build, --no-launch-profile, -c, "${BUILD_CONFIGURATION:-Debug}"]
+      iterate:
+        processesToKill: [dotnet, vsdbg]
+        buildCommands:
+        - [dotnet, build, --no-restore, -c, "${BUILD_CONFIGURATION:-Debug}"]
