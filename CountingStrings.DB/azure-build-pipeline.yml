@@ -13,7 +13,7 @@ trigger:
 variables:
   projectName: countingstringsdb
   registryServerName: '$(registryName).azurecr.io'
-  imageName: '$(projectName)'
+  imageName: '$(imageName)'
   # define 4 more variables: tenantId, registryName, registryLogin and registryPassword in the build pipeline in UI
 
 
