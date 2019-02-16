@@ -35,7 +35,7 @@ steps:
   inputs:
     helmVersion: 2.12.3
 
-- bash: helm package --version $(build.buildId) --destination $(build.artifactStagingDirectory) $(system.defaultWorkingDirectory)/$(projectId)/charts/$(projectId)
+- bash: helm package --version $(build.buildId) --destination $(build.artifactStagingDirectory) $(system.defaultWorkingDirectory)/$(projectName)/charts/$(projectId)
   displayName: 'helm package'
   
 - bash: az login --service-principal -u $(registryLogin) -p $(registryPassword) -t $(tenantId)
