@@ -16,8 +16,8 @@ service:
 deployment:
   annotations: {}
 persistence:
-  enabled: true
-  existingDataClaim: countingstringsdb-data
+  enabled: false
+  # existingDataClaim: countingstringsdb-data
   # existingTransactionLogClaim:
   # existingBackupClaim:
   # existingMasterClaim:
