@@ -1,0 +1,6 @@
+1. Create cluster
+https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough
+2. Add dashboard 
+https://docs.microsoft.com/en-us/azure/aks/kubernetes-dashboard
+3. Configure pipeline
+https://cloudblogs.microsoft.com/opensource/2018/11/27/tutorial-azure-devops-setup-cicd-pipeline-kubernetes-docker-helm/
