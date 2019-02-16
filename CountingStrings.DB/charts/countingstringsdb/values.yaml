@@ -17,11 +17,11 @@ deployment:
   annotations: {}
 persistence:
   enabled: true
-  existingDataClaim: countingstringsdb-data
+  # existingDataClaim: countingstringsdb-data
   # existingTransactionLogClaim:
   # existingBackupClaim:
   # existingMasterClaim:
-  storageClass: "default"
+  # storageClass: "default"
   # dataAccessMode: ReadWriteOnce
   # dataSize: 1Gi
   # transactionLogAccessMode: ReadWriteOnce
