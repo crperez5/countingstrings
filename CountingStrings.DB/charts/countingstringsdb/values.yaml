@@ -18,9 +18,9 @@ deployment:
 persistence:
   enabled: true
   existingDataClaim: countingstringsdb-data
-  existingTransactionLogClaim: countingstringsdb-translog
-  existingBackupClaim: countingstringsdb-backup
-  existingMasterClaim: countingstringsdb-master
+  # existingTransactionLogClaim:
+  # existingBackupClaim:
+  # existingMasterClaim:
   storageClass: "default"
   dataAccessMode: ReadWriteOnce
   dataSize: 1Gi
