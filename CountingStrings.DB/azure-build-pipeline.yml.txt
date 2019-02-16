@@ -8,10 +8,10 @@ trigger:
     - refs/heads/*
   paths:
     include: 
-    - parrot/
+    - CountingStrings.DB/
 
 variables:
-  projectName: parrot
+  projectName: countingstringsdb
   registryServerName: '$(registryName).azurecr.io'
   imageName: '$(projectName)'
   # define 4 more variables: tenantId, registryName, registryLogin and registryPassword in the build pipeline in UI
