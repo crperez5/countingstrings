@@ -69,15 +69,6 @@ spec:
           ports:
             - name: mssql
               containerPort: {{ .Values.service.port }}
-          volumeMounts:
-            - name: data
-              mountPath: /mssql-data/data
-            - name: transactionlog
-              mountPath: /mssql-translog/translog
-            - name: backup
-              mountPath: /mssql-backup/backup
-            - name: master
-              mountPath: /mssql-data/master
           livenessProbe:
              tcpSocket:
                port: mssql
