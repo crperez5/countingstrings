@@ -9,8 +9,8 @@
 ##
 image:
   registry: countingstringscr.azurecr.io
-  repository: kapocris/rabbitmq
-
+  repository: kapocris/countingstringsbroker
+  tag: 3.7.12
 
   ## set to true if you would like to see extra information on logs
   ## it turns BASH and NAMI debugging in minideb
@@ -21,7 +21,7 @@ image:
   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
   ## ref: http://kubernetes.io/docs/user-guide/images/#pre-pulling-images
   ##
-  pullPolicy: Always
+  pullPolicy: IfNotPresent
   ## Optionally specify an array of imagePullSecrets.
   ## Secrets must be manually created in the namespace.
   ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
@@ -86,7 +86,7 @@ rabbitmq:
     loopback_users.guest = false
 
   ## Configuration file content: extra configuration
-  ## Use this instead of  `configuration` to add more configuration
+  ## Use this instead of `configuration` to add more configuration
   extraConfiguration: |-
     #disk_free_limit.absolute = 50MB
 
@@ -96,13 +96,12 @@ service:
   ## Node port
   ## ref: https://github.com/bitnami/bitnami-docker-rabbitmq#environment-variables
   ##
-  # nodePort: 30672
+  nodePort: 5672
 
   ## Amqp port
   ## ref: https://github.com/bitnami/bitnami-docker-rabbitmq#environment-variables
   ##
-  port: 5672
-
+  amqpPort: 5672
   ## Dist port
   ## ref: https://github.com/bitnami/bitnami-docker-rabbitmq#environment-variables
   ##
@@ -126,7 +125,7 @@ securityContext:
 
 persistence:
   ## this enables PVC templates that will create one per pod
-  enabled: false
+  enabled: true
 
   ## rabbitmq data Persistent Volume Storage Class
   ## If defined, storageClassName: <storageClass>
@@ -135,7 +134,7 @@ persistence:
   ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
   ##   GKE, AWS & OpenStack)
   ##
-  # storageClass: "-"
+  storageClass: "default"
   accessMode: ReadWriteOnce
 
   # If you change this value, you might have to adjust `rabbitmq.diskFreeLimit` as well.
@@ -144,15 +143,19 @@ persistence:
 ## Configure resource requests and limits
 ## ref: http://kubernetes.io/docs/user-guide/compute-resources/
 ##
-resources: {}
+resources:
+  requests:
+    memory: 256Mi
+    cpu: 100m
 
-## Replica count, set to 1 to provide a default available cluster
-replicas: 1
+## Replica count, set to 3 to provide a default available cluster
+replicas: 3
 
 ## Node labels and tolerations for pod assignment
 ## ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#nodeselector
 ## ref: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#taints-and-tolerations-beta-feature
-nodeSelector: {}
+nodeSelector:
+  beta.kubernetes.io/arch: amd64
 tolerations: []
 affinity: {}
 
@@ -174,7 +177,7 @@ ingress:
 
   ## Set this to true in order to enable TLS on the ingress record
   ## A side effect of this will be that the backend wordpress service will be connected at port 443
-  tls: false
+  tls: true
 
   ## If TLS is set to true, you must declare what secret will store the key/certificate for TLS
   tlsSecret: myTlsSecret
@@ -209,7 +212,7 @@ readinessProbe:
   successThreshold: 1
 
 metrics:
-  enabled: false
+  enabled: true
   image:
     registry: docker.io
     repository: kbudde/rabbitmq-exporter
