@@ -267,8 +267,8 @@ rabbitmqAmqpsSupport:
 replicaCount: 3
 
 image:
-  repository: countingstringscr.azurecr.io/kapocris/countingstringsbroker
-  tag: latest
+  repository: rabbitmq
+  tag: 3.7-alpine
   pullPolicy: IfNotPresent
   ## Optionally specify an array of imagePullSecrets.
   ## Secrets must be manually created in the namespace.
