@@ -1,4 +1,4 @@
-name: rabbitmq-ha
+name: countingstringsbroker
 apiVersion: v1
 appVersion: 3.7.8
 version: 1.19.0
@@ -17,5 +17,5 @@ sources:
 - https://github.com/rabbitmq/rabbitmq
 - https://github.com/docker-library/rabbitmq
 maintainers:
-- name: steven-sheehy
-  email: ssheehy@firescope.com
+- name: cristian
+  email: crperez.informatica@gmail.com
