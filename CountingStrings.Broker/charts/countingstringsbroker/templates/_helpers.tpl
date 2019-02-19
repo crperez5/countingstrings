@@ -2,7 +2,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "rabbitmq.name" -}}
+{{- define "rabbitmq-ha.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
 
@@ -11,7 +11,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "rabbitmq.fullname" -}}
+{{- define "rabbitmq-ha.fullname" -}}
 {{- if .Values.fullnameOverride -}}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" -}}
 {{- else -}}
@@ -25,63 +25,82 @@ If release name contains chart name it will be used as a full name.
 {{- end -}}
 
 {{/*
-Create chart name and version as used by the chart label.
+Create the name of the service account to use
 */}}
-{{- define "rabbitmq.chart" -}}
-{{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" -}}
-{{- end -}}
-
-{{/*
-Return the proper RabbitMQ image name
-*/}}
-{{- define "rabbitmq.image" -}}
-{{- $registryName := .Values.image.registry -}}
-{{- $repositoryName := .Values.image.repository -}}
-{{- $tag := .Values.image.tag | toString -}}
-{{/*
-Helm 2.11 supports the assignment of a value to a variable defined in a different scope,
-but Helm 2.9 and 2.10 doesn't support it, so we need to implement this if-else logic.
-Also, we can't use a single if because lazy evaluation is not an option
-*/}}
-{{- if .Values.global }}
-    {{- if .Values.global.imageRegistry }}
-        {{- printf "%s/%s:%s" .Values.global.imageRegistry $repositoryName $tag -}}
-    {{- else -}}
-        {{- printf "%s/%s:%s" $registryName $repositoryName $tag -}}
-    {{- end -}}
+{{- define "rabbitmq-ha.serviceAccountName" -}}
+{{- if .Values.serviceAccount.create -}}
+    {{ default (include "rabbitmq-ha.fullname" .) .Values.serviceAccount.name }}
 {{- else -}}
-    {{- printf "%s/%s:%s" $registryName $repositoryName $tag -}}
+    {{ default "default" .Values.serviceAccount.name }}
 {{- end -}}
 {{- end -}}
 
 {{/*
-Return the proper metrics image name
+Generate chart secret name
 */}}
-{{- define "metrics.image" -}}
-{{- $registryName :=  .Values.metrics.image.registry -}}
-{{- $repositoryName := .Values.metrics.image.repository -}}
-{{- $tag := .Values.metrics.image.tag | toString -}}
-{{- printf "%s/%s:%s" $registryName $repositoryName $tag -}}
+{{- define "rabbitmq-ha.secretName" -}}
+{{ default (include "rabbitmq-ha.fullname" .) .Values.existingSecret }}
 {{- end -}}
 
 {{/*
-Get the password secret.
+Generate chart ssl secret name
 */}}
-{{- define "rabbitmq.secretPasswordName" -}}
-    {{- if .Values.rabbitmq.existingPasswordSecret -}}
-        {{- printf "%s" .Values.rabbitmq.existingPasswordSecret -}}
-    {{- else -}}
-        {{- printf "%s" (include "rabbitmq.fullname" .) -}}
-    {{- end -}}
+{{- define "rabbitmq-ha.certSecretName" -}}
+{{ default (print (include "rabbitmq-ha.fullname" .) "-cert") .Values.rabbitmqCert.existingSecret }}
 {{- end -}}
 
 {{/*
-Get the erlang secret.
+Defines a JSON file containing definitions of all broker objects (queues, exchanges, bindings, 
+users, virtual hosts, permissions and parameters) to load by the management plugin.
 */}}
-{{- define "rabbitmq.secretErlangName" -}}
-    {{- if .Values.rabbitmq.existingErlangSecret -}}
-        {{- printf "%s" .Values.rabbitmq.existingErlangSecret -}}
-    {{- else -}}
-        {{- printf "%s" (include "rabbitmq.fullname" .) -}}
-    {{- end -}}
+{{- define "rabbitmq-ha.definitions" -}}
+{
+  "users": [
+    {
+      "name": {{ .Values.managementUsername | quote }},
+      "password": {{ .Values.managementPassword | quote }},
+      "tags": "management"
+    },
+    {
+      "name": {{ .Values.rabbitmqUsername | quote }},
+      "password": {{ .Values.rabbitmqPassword | quote }},
+      "tags": "administrator"
+    }{{- if .Values.definitions.users -}},
+{{ .Values.definitions.users | indent 4 }}
+{{- end }}
+  ],
+  "vhosts": [
+    {
+      "name": {{ .Values.rabbitmqVhost | quote }}
+    }{{- if .Values.definitions.vhosts -}},
+{{ .Values.definitions.vhosts | indent 4 }}
+{{- end }}
+  ],
+  "permissions": [
+    {
+      "user": {{ .Values.rabbitmqUsername | quote }},
+      "vhost": {{ .Values.rabbitmqVhost | quote }},
+      "configure": ".*",
+      "read": ".*",
+      "write": ".*"
+    }{{- if .Values.definitions.permissions -}},
+{{ .Values.definitions.permissions | indent 4 }}
+{{- end }}
+  ],
+  "parameters": [
+{{ .Values.definitions.parameters| indent 4 }}
+  ],
+  "policies": [
+{{ .Values.definitions.policies | indent 4 }}
+  ],
+  "queues": [
+{{ .Values.definitions.queues | indent 4 }}
+  ],
+  "exchanges": [
+{{ .Values.definitions.exchanges | indent 4 }}
+  ],
+  "bindings": [
+{{ .Values.definitions.bindings| indent 4 }}
+  ]
+}
 {{- end -}}

@@ -1,46 +1,198 @@
-apiVersion: apps/v1beta2
+apiVersion: apps/v1beta1
 kind: StatefulSet
 metadata:
-  name: {{ template "rabbitmq.fullname" . }}
+  name: {{ template "rabbitmq-ha.fullname" . }}
   labels:
-    app: {{ template "rabbitmq.name" . }}
-    chart: {{ template "rabbitmq.chart" .  }}
-    release: "{{ .Release.Name }}"
-    heritage: "{{ .Release.Service }}"
+    app: {{ template "rabbitmq-ha.name" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+{{- if .Values.extraLabels }}
+{{ toYaml .Values.extraLabels | indent 4 }}
+{{- end }}
 spec:
-  serviceName: {{ template "rabbitmq.fullname" . }}-headless
-  replicas: {{ .Values.replicas }}
-  selector:
-    matchLabels:
-      app: {{ template "rabbitmq.name" . }}
-      release: "{{ .Release.Name }}"
+  podManagementPolicy: {{ .Values.podManagementPolicy }}
+  serviceName: {{ template "rabbitmq-ha.fullname" . }}-discovery
+  replicas: {{ .Values.replicaCount }}
+  updateStrategy:
+    type: {{ .Values.updateStrategy }}
   template:
     metadata:
       labels:
-        app: {{ template "rabbitmq.name" . }}
-        release: "{{ .Release.Name }}"
-        chart: {{ template "rabbitmq.chart" .  }}
-      {{- if .Values.podLabels }}
-{{ toYaml .Values.podLabels | indent 8 }}
-      {{- end }}
-      {{- if .Values.podAnnotations }}
+        app: {{ template "rabbitmq-ha.name" . }}
+        release: {{ .Release.Name }}
+{{- if .Values.extraLabels }}
+{{ toYaml .Values.extraLabels | indent 8 }}
+{{- end }}
       annotations:
+        {{- if not .Values.existingConfigMap }}
+        checksum/config: {{ include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}
+        {{- end }}
+{{- if .Values.podAnnotations }}
 {{ toYaml .Values.podAnnotations | indent 8 }}
-      {{- end }}
+{{- end }}
     spec:
       {{- if .Values.image.pullSecrets }}
       imagePullSecrets:
       {{- range .Values.image.pullSecrets }}
         - name: {{ . }}
-      {{- end}}
       {{- end }}
-      {{- if .Values.rbacEnabled}}
-      serviceAccountName: {{ template "rabbitmq.fullname" . }}
       {{- end }}
-      {{- if .Values.affinity }}
-      affinity:
-{{ toYaml .Values.affinity | indent 8 }}
-      {{- end }}
+      terminationGracePeriodSeconds: {{ .Values.terminationGracePeriodSeconds }}
+      serviceAccountName: {{ template "rabbitmq-ha.serviceAccountName" . }}
+      initContainers:
+        - name: copy-rabbitmq-config
+          image: {{ .Values.busyboxImage.repository}}:{{ .Values.busyboxImage.tag}}
+          imagePullPolicy: {{ .Values.busyboxImage.pullPolicy }}
+          command: ['sh', '-c', 'cp /configmap/* /etc/rabbitmq; rm -f /var/lib/rabbitmq/.erlang.cookie']
+          resources:
+{{ toYaml .Values.initContainer.resources | indent 12 }}
+          volumeMounts:
+            - name: configmap
+              mountPath: /configmap
+            - name: config
+              mountPath: /etc/rabbitmq
+            - name: {{ .Values.persistentVolume.name }}
+              mountPath: /var/lib/rabbitmq
+      containers:
+        - name: {{ .Chart.Name }}
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: epmd
+              protocol: TCP
+              containerPort: 4369
+            - name: amqp
+              protocol: TCP
+              containerPort: 5672
+            - name: http
+              protocol: TCP
+              containerPort: 15672
+            {{- if .Values.rabbitmqSTOMPPlugin.enabled }}
+            - name: stomp-tcp
+              protocol: TCP
+              containerPort: 61613
+            - name: stomp-ssl
+              protocol: TCP
+              containerPort: 61614
+            {{- end }}
+            {{- if .Values.rabbitmqWebSTOMPPlugin.enabled }}
+            - name: stomp-ws
+              protocol: TCP
+              containerPort: 15674
+            {{- end }}
+            {{- if .Values.rabbitmqMQTTPlugin.enabled }}
+            - name: mqtt-tcp
+              protocol: TCP
+              containerPort: 1883
+            - name: mqtt-ssl
+              protocol: TCP
+              containerPort: 8883
+            {{- end }}
+            {{- if .Values.rabbitmqWebMQTTPlugin.enabled }}
+            - name: mqtt-ws
+              protocol: TCP
+              containerPort: 15675
+            {{- end }}
+            {{- if .Values.rabbitmqAmqpsSupport.enabled }}
+            - name: amqps
+              protocol: TCP
+              containerPort: 5671
+            {{- end }}
+          {{- $managementCredentials := printf "%s:%s" .Values.managementUsername .Values.managementPassword | b64enc }}
+          {{- $managementHeader := printf "Authorization: Basic %s" $managementCredentials }}
+          livenessProbe:
+            exec:
+              command:
+              - /bin/sh
+              - -c
+              - 'wget -O - -q --header "{{ $managementHeader }}" http://localhost:15672/api/healthchecks/node | grep -qF "{\"status\":\"ok\"}"'
+            initialDelaySeconds: {{ .Values.livenessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.livenessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.livenessProbe.timeoutSeconds }}
+            failureThreshold: {{ .Values.livenessProbe.failureThreshold }}
+          readinessProbe:
+            exec:
+              command:
+              - /bin/sh
+              - -c
+              - 'wget -O - -q --header "{{ $managementHeader }}" http://localhost:15672/api/healthchecks/node | grep -qF "{\"status\":\"ok\"}"'
+            initialDelaySeconds: {{ .Values.readinessProbe.initialDelaySeconds }}
+            timeoutSeconds: {{ .Values.readinessProbe.timeoutSeconds }}
+            periodSeconds: {{ .Values.readinessProbe.periodSeconds }}
+            failureThreshold: {{ .Values.readinessProbe.failureThreshold }}
+          env:
+            - name: MY_POD_NAME
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.name
+            - name: RABBITMQ_USE_LONGNAME
+              value: "true"
+            - name: RABBITMQ_NODENAME
+              value: rabbit@$(MY_POD_NAME).{{ template "rabbitmq-ha.fullname" . }}-discovery.{{ .Release.Namespace }}.svc.{{ .Values.clusterDomain }}
+            - name: K8S_HOSTNAME_SUFFIX
+              value: .{{ template "rabbitmq-ha.fullname" . }}-discovery.{{ .Release.Namespace }}.svc.{{ .Values.clusterDomain }}
+            - name: K8S_SERVICE_NAME
+              value: {{ template "rabbitmq-ha.fullname" . }}-discovery
+            - name: RABBITMQ_ERLANG_COOKIE
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "rabbitmq-ha.secretName" . }}
+                  key: rabbitmq-erlang-cookie
+            {{- if .Values.rabbitmqHipeCompile }}
+            - name: RABBITMQ_HIPE_COMPILE
+              value: {{ .Values.rabbitmqHipeCompile | quote }}
+            {{- end }}
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+          volumeMounts:
+            - name: {{ .Values.persistentVolume.name }}
+              mountPath: /var/lib/rabbitmq
+            - name: config
+              mountPath: /etc/rabbitmq
+            - name: definitions
+              mountPath: /etc/definitions
+              readOnly: true
+            {{- if .Values.rabbitmqCert.enabled }}
+            - name: cert
+              mountPath: /etc/cert
+            {{- end }}
+            {{- if .Values.extraVolumeMounts }}
+{{ toYaml .Values.extraVolumeMounts | indent 12 }}
+            {{- end }}
+        {{ if .Values.prometheus.exporter.enabled }}
+        - name: {{ .Chart.Name }}-exporter
+          image: {{ .Values.prometheus.exporter.image.repository }}:{{ .Values.prometheus.exporter.image.tag }}
+          imagePullPolicy: {{ .Values.prometheus.exporter.image.pullPolicy }}
+          ports:
+          - name: exporter
+            protocol: TCP
+            containerPort: {{ .Values.prometheus.exporter.port }}
+          env:
+            - name: PUBLISH_PORT
+              value: "{{ .Values.prometheus.exporter.port }}"
+            {{ if .Values.prometheus.exporter.capabilities }}
+            - name: RABBIT_CAPABILITIES
+              value: "{{ .Values.prometheus.exporter.capabilities }}"
+            {{- end }}
+            - name: RABBIT_USER
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "rabbitmq-ha.secretName" . }}
+                  key: rabbitmq-username
+            - name: RABBIT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ template "rabbitmq-ha.secretName" . }}
+                  key: rabbitmq-password
+            {{- range $key, $value := .Values.prometheus.exporter.env }}
+            - name: {{ $key }}
+              value: {{ $value | quote }}
+            {{- end }}
+          resources:
+{{ toYaml .Values.prometheus.exporter.resources | indent 12 }}
+        {{ end }}
       {{- if .Values.nodeSelector }}
       nodeSelector:
 {{ toYaml .Values.nodeSelector | indent 8 }}
@@ -49,185 +201,75 @@ spec:
       tolerations:
 {{ toYaml .Values.tolerations | indent 8 }}
       {{- end }}
-      terminationGracePeriodSeconds: 10
-      containers:
-      - name: rabbitmq
-        image: {{ template "rabbitmq.image" . }}
-        imagePullPolicy: {{ .Values.image.pullPolicy | quote }}
-        command:
-         - bash
-         - -ec
-         - |
-            mkdir -p /opt/bitnami/rabbitmq/.rabbitmq/
-            mkdir -p /opt/bitnami/rabbitmq/etc/rabbitmq/
-            #persist the erlang cookie in both places for server and cli tools
-            echo $RABBITMQ_ERL_COOKIE > /opt/bitnami/rabbitmq/var/lib/rabbitmq/.erlang.cookie
-            cp /opt/bitnami/rabbitmq/var/lib/rabbitmq/.erlang.cookie /opt/bitnami/rabbitmq/.rabbitmq/
-            #change permission so only the user has access to the cookie file
-            chmod 600 /opt/bitnami/rabbitmq/.rabbitmq/.erlang.cookie /opt/bitnami/rabbitmq/var/lib/rabbitmq/.erlang.cookie
-            #copy the mounted configuration to both places
-            cp  /opt/bitnami/rabbitmq/conf/* /opt/bitnami/rabbitmq/etc/rabbitmq
-            # Apply resources limits
-            ulimit -n "${RABBITMQ_ULIMIT_NOFILES}"
-            #replace the default password that is generated
-            sed -i "s/CHANGEME/$RABBITMQ_PASSWORD/g" /opt/bitnami/rabbitmq/etc/rabbitmq/rabbitmq.conf
-            # Move logs to stdout
-            ln -sF /dev/stdout /opt/bitnami/rabbitmq/var/log/rabbitmq/rabbit@${MY_POD_IP}.log
-            ln -sF /dev/stdout /opt/bitnami/rabbitmq/var/log/rabbitmq/rabbit@${MY_POD_IP}_upgrade.log
-            exec rabbitmq-server
-        {{- if .Values.resources }}
-        resources:
-{{ toYaml .Values.resources | indent 10 }}
-        {{- end }}
-        volumeMounts:
-          - name: config-volume
-            mountPath: /opt/bitnami/rabbitmq/conf
-          - name: data
-            mountPath: /opt/bitnami/rabbitmq/var/lib/rabbitmq/
-        ports:
-        - name: epmd
-          containerPort: 4369
-        - name: amqp
-          containerPort: {{ .Values.service.port }}
-        - name: dist
-          containerPort: {{ .Values.service.distPort }}
-        - name: stats
-          containerPort: {{ .Values.service.managerPort }}
-        {{- if .Values.livenessProbe.enabled }}
-        livenessProbe:
-          exec:
-            command: ["sh", "-c", "test \"$(curl -sS -f --user {{ .Values.rabbitmq.username }}:$RABBITMQ_PASSWORD 127.0.0.1:{{ .Values.service.managerPort }}/api/healthchecks/node)\" = '{\"status\":\"ok\"}'"]
-          initialDelaySeconds: {{ .Values.livenessProbe.initialDelaySeconds }}
-          timeoutSeconds: {{ .Values.livenessProbe.timeoutSeconds }}
-          periodSeconds: {{ .Values.livenessProbe.periodSeconds }}
-          failureThreshold: {{ .Values.livenessProbe.failureThreshold }}
-          successThreshold: {{ .Values.livenessProbe.successThreshold }}
-        {{- end }}
-        {{- if .Values.readinessProbe.enabled }}
-        readinessProbe:
-          exec:
-            command: ["sh", "-c", "test \"$(curl -sS -f --user {{ .Values.rabbitmq.username }}:$RABBITMQ_PASSWORD 127.0.0.1:{{ .Values.service.managerPort }}/api/healthchecks/node)\" = '{\"status\":\"ok\"}'"]
-          initialDelaySeconds: {{ .Values.readinessProbe.initialDelaySeconds }}
-          timeoutSeconds: {{ .Values.readinessProbe.timeoutSeconds }}
-          periodSeconds: {{ .Values.readinessProbe.periodSeconds }}
-          failureThreshold: {{ .Values.readinessProbe.failureThreshold }}
-          successThreshold: {{ .Values.readinessProbe.successThreshold }}
-        {{- end }}
-        env:
-        {{- if .Values.image.debug}}
-          - name: BASH_DEBUG
-            value: "1"
-          - name: NAMI_DEBUG
-            value: "1"
-        {{- end }}
-          - name: MY_POD_IP
-            valueFrom:
-              fieldRef:
-                fieldPath: status.podIP
-          - name: MY_POD_NAME
-            valueFrom:
-              fieldRef:
-                fieldPath: metadata.name
-          - name: MY_POD_NAMESPACE
-            valueFrom:
-              fieldRef:
-                fieldPath: metadata.namespace
-          - name: K8S_SERVICE_NAME
-            value: "{{ template "rabbitmq.fullname" . }}-headless"
-          - name: K8S_ADDRESS_TYPE
-            value: {{ .Values.rabbitmq.clustering.address_type }}
-          {{- if (eq "hostname" .Values.rabbitmq.clustering.address_type) }}
-          - name: RABBITMQ_NODENAME
-            value: "rabbit@$(MY_POD_NAME).$(K8S_SERVICE_NAME).$(MY_POD_NAMESPACE).svc.{{ .Values.rabbitmq.clustering.k8s_domain }}"
-          - name: K8S_HOSTNAME_SUFFIX
-            value: ".$(K8S_SERVICE_NAME).$(MY_POD_NAMESPACE).svc.{{ .Values.rabbitmq.clustering.k8s_domain }}"
-          {{- else }}
-          - name: RABBITMQ_NODENAME
-            value: "rabbit@$(MY_POD_IP)"
-          {{- end }}
-          - name: RABBITMQ_ULIMIT_NOFILES
-            value: {{ .Values.rabbitmq.ulimitNofiles | quote }}
-          - name: RABBITMQ_USE_LONGNAME
-            value: "true"
-          - name: RABBITMQ_ERL_COOKIE
-            valueFrom:
-              secretKeyRef:
-                name: {{ template "rabbitmq.secretErlangName" . }}
-                key: rabbitmq-erlang-cookie
-          - name: RABBITMQ_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: {{ template "rabbitmq.secretPasswordName" . }}
-                key: rabbitmq-password
-{{- if .Values.metrics.enabled }}
-      - name: metrics
-        image: {{ template "metrics.image" . }}
-        imagePullPolicy: {{ .Values.metrics.image.pullPolicy | quote }}
-        env:
-        - name: RABBIT_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: {{ template "rabbitmq.secretPasswordName" . }}
-              key: rabbitmq-password
-        - name: RABBIT_URL
-          value: "http://localhost:{{ .Values.service.managerPort }}"
-        - name: RABBIT_USER
-          value: {{ .Values.rabbitmq.username }}
-        ports:
-        - name: metrics
-          containerPort: 9090
-        livenessProbe:
-          httpGet:
-            path: /metrics
-            port: metrics
-          initialDelaySeconds: 15
-          timeoutSeconds: 5
-        readinessProbe:
-          httpGet:
-            path: /metrics
-            port: metrics
-          initialDelaySeconds: 5
-          timeoutSeconds: 5
-        resources:
-{{ toYaml .Values.metrics.resources | indent 10 }}
-{{- end }}
-
-      {{- if .Values.securityContext.enabled }}
-      securityContext:
-        fsGroup: {{ .Values.securityContext.fsGroup }}
-        runAsUser: {{ .Values.securityContext.runAsUser }}
+      {{- if eq .Values.podAntiAffinity "hard" }}
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - topologyKey: "kubernetes.io/hostname"
+              labelSelector:
+                matchLabels:
+                  app: {{ template "rabbitmq-ha.name" . }}
+                  release: {{ .Release.Name }}
+      {{- else if eq .Values.podAntiAffinity "soft" }}
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 1
+              podAffinityTerm:
+                topologyKey: kubernetes.io/hostname
+                labelSelector:
+                  matchLabels:
+                    app: {{ template "rabbitmq-ha.name" . }}
+                    release: {{ .Release.Name }}
+      {{- end }}
+      {{- if .Values.priorityClassName }}
+      priorityClassName: {{ .Values.priorityClassName }}
       {{- end }}
       volumes:
-        - name: config-volume
-          configMap:
-            name: {{ template "rabbitmq.fullname" . }}-config
-            items:
-            - key: rabbitmq.conf
-              path: rabbitmq.conf
-            - key: enabled_plugins
-              path: enabled_plugins
-      {{- if not .Values.persistence.enabled }}
-        - name: data
+        - name: config
           emptyDir: {}
-  {{- else }}
+        - name: configmap
+          configMap:
+            name: {{ template "rabbitmq-ha.fullname" . }}
+        - name: definitions
+          secret:
+            secretName: {{ template "rabbitmq-ha.secretName" . }}
+            items:
+            - key: {{ .Values.definitionsSource }}
+              path: definitions.json
+        {{- if .Values.rabbitmqCert.enabled }}
+        - name: cert
+          secret:
+            defaultMode: 420
+            secretName: {{ template "rabbitmq-ha.certSecretName" . }}
+        {{- end }}
+        {{- if .Values.extraVolumes }}
+{{ toYaml .Values.extraVolumes | indent 8 }}
+        {{- end }}
+{{- if .Values.persistentVolume.enabled }}
   volumeClaimTemplates:
     - metadata:
-        name: data
-        labels:
-          app: {{ template "rabbitmq.name" . }}
-          release: "{{ .Release.Name }}"
-          heritage: "{{ .Release.Service }}"
+        name: {{ .Values.persistentVolume.name }}
+        annotations:
+        {{- range $key, $value := .Values.persistentVolume.annotations }}
+          {{ $key }}: {{ $value }}
+        {{- end }}
       spec:
         accessModes:
-          - {{ .Values.persistence.accessMode | quote }}
+        {{- range .Values.persistentVolume.accessModes }}
+          - {{ . | quote }}
+        {{- end }}
         resources:
-            requests:
-              storage: {{ .Values.persistence.size | quote }}
-      {{- if .Values.persistence.storageClass }}
-      {{- if (eq "-" .Values.persistence.storageClass) }}
+          requests:
+            storage: {{ .Values.persistentVolume.size | quote }}
+      {{- if .Values.persistentVolume.storageClass }}
+      {{- if (eq "-" .Values.persistentVolume.storageClass) }}
         storageClassName: ""
       {{- else }}
-        storageClassName: "{{ .Values.persistence.storageClass }}"
+        storageClassName: "{{ .Values.persistentVolume.storageClass }}"
       {{- end }}
       {{- end }}
-  {{- end }}
+{{- else }}
+        - name: {{ .Values.persistentVolume.name }}
+          emptyDir: {}
+{{- end }}
