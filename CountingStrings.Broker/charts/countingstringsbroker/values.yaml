@@ -2,7 +2,7 @@
 ## Ref: http://rabbitmq.com/access-control.html
 ##
 rabbitmqUsername: guest
-# rabbitmqPassword:
+rabbitmqPassword: MTk5MTgzNjc4OWNQLjE=
 
 ## RabbitMQ Management user used for health checks
 managementUsername: management
