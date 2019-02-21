@@ -8,7 +8,7 @@ COPY CountingStrings.Service.Data/CountingStrings.Service.Data.csproj CountingSt
 COPY CountingStrings.API.Contract/CountingStrings.API.Contract.csproj CountingStrings.API.Contract/
 COPY CountingStrings.Service/CountingStrings.Service.csproj CountingStrings.Service/
 
-FROM cpysrc AS build
+FROM cpysrc AS build 
 RUN dotnet restore CountingStrings.Worker/CountingStrings.Worker.csproj
 COPY . .
 WORKDIR /src/CountingStrings.Worker

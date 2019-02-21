@@ -8,7 +8,7 @@ image:
   repository: countingstringscr.azurecr.io/kapocris/countingstringsworker
   tag: latest
   pullPolicy: IfNotPresent
-
+environment: "Production"
 nameOverride: ""
 fullnameOverride: ""
 

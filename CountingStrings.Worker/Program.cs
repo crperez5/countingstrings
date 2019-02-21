@@ -31,7 +31,7 @@ namespace CountingStrings.Worker
             var endpointConfiguration = new EndpointConfiguration("CountingStrings.Worker");
 
             var transport = endpointConfiguration.UseTransport<RabbitMQTransport>();
-            transport.ConnectionString("host=rabbitmq-countingstringsbroker;username=guest;password=1991836789cP.1");
+            transport.ConnectionString("host=rabbitmq-countingstringsbroker;username=guest;password=MTk5MTgzNjc4OWNQLjE=");
             transport.UseConventionalRoutingTopology();
 
             endpointConfiguration.EnableInstallers();
