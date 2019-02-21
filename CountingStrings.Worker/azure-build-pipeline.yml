@@ -23,7 +23,7 @@ steps:
     docker-compose -f .\docker-compose-tests.yml up --abort-on-container-exit --build tests db
   displayName: 'run tests'
   
-- bash: docker build -f $(system.defaultWorkingDirectory)/$(projectName)/Dockerfile -t $(registryServerName)/$(imageName):$(build.buildId) -t $(registryServerName)/$(imageName):latest $(system.defaultWorkingDirectory)
+- bash: docker build -f $(system.defaultWorkingDirectory)/$(projectName).Test/Dockerfile -t $(registryServerName)/$(imageName):$(build.buildId) -t $(registryServerName)/$(imageName):latest $(system.defaultWorkingDirectory)
   displayName: 'docker build'
 
 - bash: docker login $(registryServerName) -u $(registryLogin) -p $(registryPassword)
