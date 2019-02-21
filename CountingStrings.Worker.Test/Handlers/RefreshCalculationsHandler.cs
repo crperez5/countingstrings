@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using CountingStrings.API.Contract;
 using CountingStrings.Service.Data;
+using CountingStrings.Service.Data.Extensions;
 using CountingStrings.Service.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
@@ -25,8 +26,7 @@ namespace CountingStrings.Worker.Test.Handlers
         {
             _mapper = Common.GetMapper();
 
-            _connectionString =
-                $"Server=(localdb)\\mssqllocaldb;Database=CountingStrings_{Guid.NewGuid()};Trusted_Connection=True;MultipleActiveResultSets=true";
+            _connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
 
             _context = Common.GetDbContext(_connectionString);
 
@@ -49,7 +49,6 @@ namespace CountingStrings.Worker.Test.Handlers
                 DateModified = DateTime.UtcNow
             };
             await handler.Handle(message, new TestsMessageHandlerContext());
-
 
             // Act
             await new Worker.Handlers.RefreshCalculationsHandler(Common.GetDbContext(_connectionString), Common.GetMapper())
@@ -134,10 +133,19 @@ namespace CountingStrings.Worker.Test.Handlers
             Assert.NotNull(chocolateData.SingleOrDefault(v => v.Date.Date == DateTime.UtcNow.Date && v.Count == 2));
         }
 
+        private void EmptyDatabase()
+        {
+            _context.SessionCounts.Clear();
+            _context.Sessions.Clear();
+            _context.SessionWords.Clear();
+            _context.SessionWordCounts.Clear();
+            _context.WordDateCounts.Clear();
+            _context.WorkerJobs.Clear();
+            _context.SaveChanges();
+        }
+
         private void PopulateDatabase()
         {
-            _context.Database.Migrate();
-
             _context.SessionCounts.Add(new SessionCount
             {
                 Id = Guid.Parse("A9EF096F-9FB5-4408-B3FB-FF7F577D7C80"),
@@ -194,7 +202,7 @@ namespace CountingStrings.Worker.Test.Handlers
 
         public void Dispose()
         {
-            _context.Database.EnsureDeleted();
+            EmptyDatabase();
         }
     }
 }

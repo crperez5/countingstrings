@@ -8,11 +8,6 @@ COPY CountingStrings.Service.Data/CountingStrings.Service.Data.csproj CountingSt
 COPY CountingStrings.API.Contract/CountingStrings.API.Contract.csproj CountingStrings.API.Contract/
 COPY CountingStrings.Service/CountingStrings.Service.csproj CountingStrings.Service/
 
-FROM cpysrc AS test
-COPY CountingStrings.Worker.Test/CountingStrings.Worker.Test.csproj CountingStrings.Worker.Test/
-RUN dotnet restore CountingStrings.Worker.Test/CountingStrings.Worker.Test.csproj
-RUN dotnet test
-
 FROM cpysrc AS build
 RUN dotnet restore CountingStrings.Worker/CountingStrings.Worker.csproj
 COPY . .

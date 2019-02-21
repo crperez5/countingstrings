@@ -78,9 +78,9 @@ namespace CountingStrings.Worker.Handlers
                 var currentCounts = await _db.WordDateCounts.Where(s =>
                     s.Word == unprocessedSessionWord.Key.Word && s.DateCreated.Date == unprocessedSessionWord.Key.Date.Date).ToListAsync();
                 _db.WordDateCounts.RemoveRange(currentCounts);
-
+                
                 var ocurrences = await _db.SessionWords.Where(s =>
-                    s.Word == unprocessedSessionWord.Key.Word && s.DateCreated == unprocessedSessionWord.Key.Date.Date).ToListAsync();
+                    s.Word == unprocessedSessionWord.Key.Word && s.DateCreated.Date == unprocessedSessionWord.Key.Date.Date).ToListAsync();
 
                 await _db.WordDateCounts.AddAsync(new WordDateCount
                 {

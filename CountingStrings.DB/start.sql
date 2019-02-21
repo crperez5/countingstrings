@@ -1,5 +1,6 @@
 CREATE DATABASE CountingStrings;
 GO
+
 USE CountingStrings;
 CREATE TABLE Sessions (
     Id uniqueidentifier Not Null Primary Key, 
@@ -71,4 +72,3 @@ GO
 IF NOT EXISTS (SELECT * FROM RequestCount)
     INSERT INTO RequestCount ([Count]) VALUES (0);
 GO
-
