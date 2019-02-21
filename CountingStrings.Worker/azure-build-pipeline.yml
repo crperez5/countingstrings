@@ -18,6 +18,9 @@ variables:
 
 
 steps:
+- bash: docker login $(registryServerName) -u $(registryLogin) -p $(registryPassword)
+  displayName: 'docker login'
+  
 - bash: |
     cd $(system.defaultWorkingDirectory)/$(projectName).Test
     docker-compose -f docker-compose-tests.yml up --abort-on-container-exit --build tests db
@@ -25,9 +28,6 @@ steps:
   
 - bash: docker build -f $(system.defaultWorkingDirectory)/$(projectName)/Dockerfile -t $(registryServerName)/$(imageName):$(build.buildId) -t $(registryServerName)/$(imageName):latest $(system.defaultWorkingDirectory)
   displayName: 'docker build'
-
-- bash: docker login $(registryServerName) -u $(registryLogin) -p $(registryPassword)
-  displayName: 'docker login'
 
 - bash: |
     docker push $(registryServerName)/$(imageName):$(build.buildId)
