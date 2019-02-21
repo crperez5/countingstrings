@@ -9,6 +9,8 @@ imagePullSecrets: []
   # This uses credentials from secret "myRegistryKeySecretName".
   # - name: myRegistryKeySecretName
 service:
+  type: ClusterIP
+  port: 88
 
 ingress:
   enabled: false
