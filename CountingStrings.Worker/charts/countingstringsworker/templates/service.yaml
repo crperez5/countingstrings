@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ template "countingstringsworker.fullname" . }}
+  name: {{ include "countingstringsworker.fullname" . }}
   labels:
-    app: {{ template "countingstringsworker.name" . }}
-    chart: {{ template "countingstringsworker.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+    app.kubernetes.io/name: {{ include "countingstringsworker.name" . }}
+    helm.sh/chart: {{ include "countingstringsworker.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -15,5 +15,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app: {{ template "countingstringsworker.name" . }}
-    release: {{ .Release.Name }}
+    app.kubernetes.io/name: {{ include "countingstringsworker.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}

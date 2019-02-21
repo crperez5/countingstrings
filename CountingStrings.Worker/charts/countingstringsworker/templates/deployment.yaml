@@ -1,27 +1,23 @@
-apiVersion: apps/v1beta2
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ template "countingstringsworker.fullname" . }}
+  name: {{ include "countingstringsworker.fullname" . }}
   labels:
-    app: {{ template "countingstringsworker.name" . }}
-    chart: {{ template "countingstringsworker.chart" . }}
-    draft: {{ default "draft-app" .Values.draft }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+    app.kubernetes.io/name: {{ include "countingstringsworker.name" . }}
+    helm.sh/chart: {{ include "countingstringsworker.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ template "countingstringsworker.name" . }}
-      release: {{ .Release.Name }}
+      app.kubernetes.io/name: {{ include "countingstringsworker.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app: {{ template "countingstringsworker.name" . }}
-        draft: {{ default "draft-app" .Values.draft }}
-        release: {{ .Release.Name }}
-      annotations:
-        buildID: {{ .Values.buildID }}
+        app.kubernetes.io/name: {{ include "countingstringsworker.name" . }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
       containers:
         - name: {{ .Chart.Name }}
@@ -31,7 +27,6 @@ spec:
             - name: http
               containerPort: 80
               protocol: TCP
-          {{- if .Values.probes.enabled }}
           livenessProbe:
             httpGet:
               path: /
@@ -40,33 +35,17 @@ spec:
             httpGet:
               path: /
               port: http
-          {{- end }}
-          env:
-            {{- $root := . }}
-            {{- range $ref, $values := .Values.secrets }}
-            {{- range $key, $value := $values }}
-            - name: {{ $ref }}_{{ $key }}
-              valueFrom:
-                secretKeyRef:
-                  name: {{ template "countingstringsworker.fullname" $root }}-{{ $ref | lower }}
-                  key: {{ $key }}
-            {{- end }}
-            {{- end }}
           resources:
-{{ toYaml .Values.resources | indent 12 }}
-    {{- with .Values.imagePullSecrets }}
-      imagePullSecrets:
-{{ toYaml . | indent 8 }}
-    {{- end }}
-    {{- with .Values.nodeSelector }}
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
       nodeSelector:
-{{ toYaml . | indent 8 }}
-    {{- end }}
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
     {{- with .Values.affinity }}
       affinity:
-{{ toYaml . | indent 8 }}
+        {{- toYaml . | nindent 8 }}
     {{- end }}
     {{- with .Values.tolerations }}
       tolerations:
-{{ toYaml . | indent 8 }}
+        {{- toYaml . | nindent 8 }}
     {{- end }}
