@@ -1,5 +1,7 @@
 replicaCount: 3
 image:
+  repository: countingstringscr.azurecr.io/kapocris/countingstringsapi
+  tag: latest
   pullPolicy: Always
 imagePullSecrets: []
   # Optionally specify an array of imagePullSecrets.
@@ -16,10 +18,9 @@ probes:
   enabled: false
 
 ingress:
-  enabled: true
-  basedomain: 66f4a20a7fbd425681e0.westeurope.aksapp.io
+  enabled: true  
   annotations:
-    # kubernetes.io/tls-acme: "true"
+     ingress.kubernetes.io/rewrite-target: /
   path: /
   # hosts:
   #   - chart-example.local
