@@ -4,12 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using CountingStrings.API.Contract;
 using CountingStrings.Service.Data;
-using CountingStrings.Service.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
 
 namespace CountingStrings.Service.Test.Handlers
-{
+{    
     public class LogRequestHandler : IDisposable
     {
         private readonly CountingStringsContext _context;
@@ -17,8 +16,7 @@ namespace CountingStrings.Service.Test.Handlers
 
         public LogRequestHandler()
         {
-            _connectionString =
-                $"Server=(localdb)\\mssqllocaldb;Database=CountingStrings_{Guid.NewGuid()};Trusted_Connection=True;MultipleActiveResultSets=true";
+            _connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
 
             _context = Common.GetDbContext(_connectionString);
 
@@ -67,19 +65,16 @@ namespace CountingStrings.Service.Test.Handlers
 
         private void PopulateDatabase()
         {
-            _context.Database.Migrate();
-
-            _context.RequestCounts.Add(new RequestCount
+            using (var context = Common.GetDbContext(_connectionString))
             {
-                Count = 0
-            });
-
-            _context.SaveChanges();
+                var requestCount = context.RequestCounts.Single();
+                requestCount.Count = 0;
+                context.SaveChanges();
+            }
         }
 
         public void Dispose()
-        {
-            _context.Database.EnsureDeleted();
+        {            
         }
     }
 }

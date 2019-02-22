@@ -5,12 +5,14 @@ using System.Threading.Tasks;
 using AutoMapper;
 using CountingStrings.API.Contract;
 using CountingStrings.Service.Data;
+using CountingStrings.Service.Data.Extensions;
 using CountingStrings.Service.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
 
 namespace CountingStrings.Service.Test.Handlers
 {
+    [Collection("SessionTests")]
     public class CloseSessionHandler : IDisposable
     {
         private readonly CountingStringsContext _context;
@@ -22,8 +24,7 @@ namespace CountingStrings.Service.Test.Handlers
         {
             _mapper = Common.GetMapper();
 
-            _connectionString =
-                $"Server=(localdb)\\mssqllocaldb;Database=CountingStrings_{Guid.NewGuid()};Trusted_Connection=True;MultipleActiveResultSets=true";
+            _connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
 
             _context = Common.GetDbContext(_connectionString);
 
@@ -40,8 +41,10 @@ namespace CountingStrings.Service.Test.Handlers
         [Fact]
         public async Task CloseSession()
         {
-
             // Arrange
+            var sessionCount = await _context.SessionCounts.SingleAsync();
+            sessionCount.NumClose = 0;
+            sessionCount.NumOpen = 1;
             await _context.Sessions.AddAsync(_existingSession);
             await _context.SaveChangesAsync();
             var handler = new Service.Handlers.CloseSessionHandler(_context, _mapper);
@@ -51,16 +54,11 @@ namespace CountingStrings.Service.Test.Handlers
             await handler.Handle(message, new TestsMessageHandlerContext());
 
             // Assert
-            var sessions = await _context.Sessions.ToListAsync();
-            var sessionCounts = await _context.SessionCounts.ToListAsync();
-
-            Assert.Single(sessions);
-            var session = sessions.First();
+            var refreshedContext = Common.GetDbContext(_connectionString);
+            var session = await refreshedContext.Sessions.SingleAsync();
+            sessionCount = await refreshedContext.SessionCounts.SingleAsync();
             Assert.Equal(message.SessionId, session.Id);
             Assert.Equal(0, session.Status);
-
-            Assert.Single(sessionCounts);
-            var sessionCount = sessionCounts.First();
             Assert.Equal(0, sessionCount.NumOpen);
             Assert.Equal(1, sessionCount.NumClose);
         }
@@ -119,20 +117,22 @@ namespace CountingStrings.Service.Test.Handlers
 
         public void Dispose()
         {
-            _context.Database.EnsureDeleted();
+            using (var context = Common.GetDbContext(_connectionString))
+            {
+                context.Sessions.Clear();
+                context.SaveChanges();
+            }
         }
 
         private void PopulateDatabase()
         {
-            _context.Database.Migrate();
-
-            _context.SessionCounts.Add(new SessionCount
+            using (var context = Common.GetDbContext(_connectionString))
             {
-                NumOpen = 1,
-                NumClose = 0
-            });
-
-            _context.SaveChanges();
+                var sessionCount = context.SessionCounts.Single();
+                sessionCount.NumOpen = 0;
+                sessionCount.NumClose = 0;
+                context.SaveChanges();
+            }
         }
     }
 }

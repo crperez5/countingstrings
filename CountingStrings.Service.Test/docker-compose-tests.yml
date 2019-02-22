@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  tests:
+    build: 
+      context: ..
+      dockerfile: ./CountingStrings.Service.Test/Dockerfile
+    environment:
+      - CONNECTION_STRING=Server=db;Database=CountingStrings;user=sa;password=1991836789cP.1;      
+    command: >
+      /bin/bash -c "
+        echo 'Waiting for DB';
+        sleep 10;
+        echo 'I am done waiting for DB'
+        dotnet test CountingStrings.Service.Test/CountingStrings.Service.Test.csproj;
+      "
+    depends_on:
+      - db
+  db:
+    environment:
+      - SA_PASSWORD=1991836789cP.1
+      - ACCEPT_EULA=Y
+      - ENV_SLEEP_TIME=10
+    image: countingstringscr.azurecr.io/kapocris/countingstringsdb
+

@@ -5,12 +5,13 @@ using System.Threading.Tasks;
 using AutoMapper;
 using CountingStrings.API.Contract;
 using CountingStrings.Service.Data;
-using CountingStrings.Service.Data.Models;
+using CountingStrings.Service.Data.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Xunit;
 
 namespace CountingStrings.Service.Test.Handlers
 {
+    [Collection("SessionTests")]
     public class OpenSessionHandler : IDisposable
     {
         private readonly CountingStringsContext _context;
@@ -21,8 +22,7 @@ namespace CountingStrings.Service.Test.Handlers
         {
             _mapper = Common.GetMapper();
 
-            _connectionString =
-                $"Server=(localdb)\\mssqllocaldb;Database=CountingStrings_{Guid.NewGuid()};Trusted_Connection=True;MultipleActiveResultSets=true";
+            _connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
 
             _context = Common.GetDbContext(_connectionString);
 
@@ -96,21 +96,22 @@ namespace CountingStrings.Service.Test.Handlers
 
         public void Dispose()
         {
-            _context.Database.EnsureDeleted();
+            using (var context = Common.GetDbContext(_connectionString))
+            {
+                context.Sessions.Clear();
+                context.SaveChanges();
+            }
         }
 
         private void PopulateDatabase()
         {
-            _context.Database.Migrate();
-
-            _context.SessionCounts.Add(new SessionCount
+            using (var context = Common.GetDbContext(_connectionString))
             {
-                Id = Guid.Parse("A9EF096F-9FB5-4408-B3FB-FF7F577D7C80"),
-                NumOpen = 0,
-                NumClose = 0
-            });
-
-            _context.SaveChanges();
+                var sessionCount = context.SessionCounts.Single();
+                sessionCount.NumOpen = 0;
+                sessionCount.NumClose = 0;
+                context.SaveChanges();
+            }
         }
     }
 }

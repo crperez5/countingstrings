@@ -1,7 +1,8 @@
-replicaCount: 1
+replicaCount: 3
 image:
   pullPolicy: Always
 imagePullSecrets: []
+environment: "Production"
   # Optionally specify an array of imagePullSecrets.
   # Secrets must be manually created in the namespace.
   # ref: https://kubernetes.io/docs/concepts/containers/images/#specifying-imagepullsecrets-on-a-pod

@@ -32,16 +32,9 @@ spec:
               containerPort: 80
               protocol: TCP
           {{- if .Values.probes.enabled }}
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
-          {{- end }}
           env:
+            - name: "ASPNETCORE_ENVIRONMENT"
+              value: {{ .Values.environment }}          
             {{- $root := . }}
             {{- range $ref, $values := .Values.secrets }}
             {{- range $key, $value := $values }}
