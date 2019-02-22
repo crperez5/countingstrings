@@ -1,4 +1,4 @@
-replicaCount: 1
+replicaCount: 3
 image:
   pullPolicy: Always
 imagePullSecrets: []
@@ -17,7 +17,7 @@ probes:
 
 ingress:
   enabled: true
-  basedomain: 52f3139d250f4c6bb296.westeurope.aksapp.io
+  basedomain: 66f4a20a7fbd425681e0.westeurope.aksapp.io
   annotations:
     # kubernetes.io/tls-acme: "true"
   path: /
