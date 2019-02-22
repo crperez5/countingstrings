@@ -85,6 +85,8 @@ namespace CountingStrings.API
 
             app.Use(async (ctx, next) =>
             {
+                Console.WriteLine("A new request has been receivied.");
+                
                 var bus = ctx.RequestServices.GetService<IMessageSession>();
                 await bus.Send(new LogRequest
                 {
