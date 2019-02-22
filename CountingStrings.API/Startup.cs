@@ -24,15 +24,14 @@ namespace CountingStrings.API
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
-            Thread.Sleep(120000);
+        {            
             #region Bus
 
             var endpointConfiguration = new EndpointConfiguration("CountingStrings.API");
             endpointConfiguration.SendOnly();
 
             var transport = endpointConfiguration.UseTransport<RabbitMQTransport>();
-            transport.ConnectionString("host=rabbitmq");
+            transport.ConnectionString("host=rabbitmq-countingstringsbroker;username=guest;password=MTk5MTgzNjc4OWNQLjE=");
             transport.UseConventionalRoutingTopology();
 
             var routing = transport.Routing();

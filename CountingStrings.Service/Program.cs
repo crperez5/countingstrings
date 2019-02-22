@@ -17,8 +17,6 @@ namespace CountingStrings.Service
 
         static void Main(string[] args)
         {
-            Thread.Sleep(120000);
-
             var configuration = GetServiceConfiguration();
 
             var services = new ServiceCollection();
@@ -33,7 +31,7 @@ namespace CountingStrings.Service
             var endpointConfiguration = new EndpointConfiguration("CountingStrings.Service");
 
             var transport = endpointConfiguration.UseTransport<RabbitMQTransport>();
-            transport.ConnectionString("host=rabbitmq");
+            transport.ConnectionString("host=rabbitmq-countingstringsbroker;username=guest;password=MTk5MTgzNjc4OWNQLjE=");
             transport.UseConventionalRoutingTopology();
 
             endpointConfiguration.EnableInstallers();
