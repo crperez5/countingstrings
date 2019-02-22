@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ template "countingstringsservice.fullname" . }}
+  name: {{ include "countingstringsservice.fullname" . }}
   labels:
-    app: {{ template "countingstringsservice.name" . }}
-    chart: {{ template "countingstringsservice.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+    app.kubernetes.io/name: {{ include "countingstringsservice.name" . }}
+    helm.sh/chart: {{ include "countingstringsservice.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -15,5 +15,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app: {{ template "countingstringsservice.name" . }}
-    release: {{ .Release.Name }}
+    app.kubernetes.io/name: {{ include "countingstringsservice.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
