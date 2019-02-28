@@ -5,6 +5,8 @@ CountingStrings is a distributed multi-container app hosted in Azure which relie
 
 You can play with the app live at https://13.80.152.17/swagger/index.html
 
+Presentation "Docker & CountingStrings Architecture": https://slides.com/cristianperezmatturro/docker-in-a-nutshell
+
 ## Project organization
 
 The solution is composed of three apps/services:
