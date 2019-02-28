@@ -3,7 +3,7 @@
 CountingStrings is a distributed multi-container app hosted in Azure which relies on Docker, Kubertnetes,
 .NET Core, RabbitMQ and SQL Server.
 
-You can play with the app live at (send me a PM to get the URL)
+You can play with the app live at https://13.80.152.17/swagger/index.html
 
 ## Project organization
 
