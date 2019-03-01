@@ -21,6 +21,8 @@ Handles the commands. Stores in the database all the events that happen in the s
 ### Worker (CountingStrings.Worker)
 Background service that wakes up every 30 seconds, checks for new words that have been submitted and performs the heavy calculations (words per session, word frequency).
 
+![alt text](https://i.imgur.com/mXMvWJr.png)
+
 ## Built With
 
 * [.netcore](https://dotnet.github.io/) - Web Framework
