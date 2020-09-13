@@ -17,10 +17,10 @@ deployment:
   annotations: {}
 persistence:
   enabled: true
-  existingDataClaim: countingstringsdb-data
-  existingTransactionLogClaim: countingstringsdb-translog
-  existingBackupClaim: countingstringsdb-backup
-  existingMasterClaim: countingstringsdb-master
+  existingDataClaim:
+  existingTransactionLogClaim:
+  existingBackupClaim:
+  existingMasterClaim:
 livenessprobe:
   initialDelaySeconds: 15
   periodSeconds: 20

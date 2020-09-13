@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using CountingStrings.API.Contract;
 using CountingStrings.API.Data.Models;
 using CountingStrings.API.Data.Repositories;
-using CountingStrings.API.SwaggerProviders;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NServiceBus;
-using Swashbuckle.AspNetCore.Examples;
+
 
 namespace CountingStrings.API.Controllers
 {
@@ -52,6 +52,7 @@ namespace CountingStrings.API.Controllers
 
         [HttpPost]
         [Route("api/sessions/open")]
+        [Authorize("write:sessions")]
         [ProducesResponseType(201, Type = typeof(Session))]
         public async Task<IActionResult> Open()
         {
@@ -75,6 +76,7 @@ namespace CountingStrings.API.Controllers
 
         [HttpPut]
         [Route("api/sessions/{id}/close")]
+        [Authorize("write:sessions")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
         public async Task<IActionResult> Close(Guid id)
@@ -103,9 +105,10 @@ namespace CountingStrings.API.Controllers
 
         [HttpPost]
         [Route("api/sessions/{id}/submit")]
+        [Authorize("write:sessions")]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]
-        [SwaggerRequestExample(typeof(List<string>), typeof(SubmitWordsSwaggerProvider))]
+       
 
         public async Task<IActionResult> SubmitWords(Guid id, [FromBody]List<string> words)
         {

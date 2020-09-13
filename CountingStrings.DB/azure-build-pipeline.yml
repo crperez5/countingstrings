@@ -13,7 +13,8 @@ trigger:
 variables:
   projectName: $(projectId)
   registryServerName: '$(registryName).azurecr.io'
-  imageName: '$(imageName)'
+  imageName: $(imageId)
+  chartName: $(chartId)
   # define 4 more variables: tenantId, registryName, registryLogin and registryPassword in the build pipeline in UI
 
 
@@ -21,26 +22,25 @@ steps:
 - bash: docker build -f $(system.defaultWorkingDirectory)/$(projectName)/Dockerfile -t $(registryServerName)/$(imageName):$(build.buildId) -t $(registryServerName)/$(imageName):latest $(system.defaultWorkingDirectory)/$(projectName)
   displayName: 'docker build'
 
-- bash: docker login $(registryServerName) -u $(registryLogin) -p $(registryPassword)
+- bash: docker login $(registryServerName) --username $(registryLogin) --password $(registryPassword)
   displayName: 'docker login'
 
 - bash: |
     docker push $(registryServerName)/$(imageName):$(build.buildId)
     docker push $(registryServerName)/$(imageName):latest
   displayName: 'docker push'
-  condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/master'))
+
 
 - task: HelmInstaller@0
   displayName: 'Install Helm'
   inputs:
     helmVersion: 2.12.3
 
-- bash: helm package --version $(build.buildId) --destination $(build.artifactStagingDirectory) $(system.defaultWorkingDirectory)/$(projectName)/charts/$(projectId)
+- bash: helm package --version $(build.buildId) --destination $(build.artifactStagingDirectory) $(system.defaultWorkingDirectory)/$(projectName)/charts/$(chartId)
   displayName: 'helm package'
   
-- bash: az login --service-principal -u $(registryLogin) -p $(registryPassword) -t $(tenantId)
+- bash: az login --service-principal -u $(spLogin) -p $(spPassword) -t $(tenantId)
   displayName: 'az login'
 
-- bash: az acr helm push -n $(registryName) $(build.artifactStagingDirectory)/$(projectId)-$(build.buildId).tgz
+- bash: az acr helm push -n $(registryName) $(build.artifactStagingDirectory)/$(chartId)-$(build.buildId).tgz
   displayName: 'az acr helm push'
-  condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/master'))

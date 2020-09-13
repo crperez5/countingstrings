@@ -1,9 +1,9 @@
 # CountingStrings - A Stock-taking App
 
 CountingStrings is a distributed multi-container app hosted in Azure which relies on Docker, Kubertnetes,
-.NET Core, RabbitMQ and SQL Server.
+.NET Core, Auth0, RabbitMQ and SQL Server.
 
-You can play with the app live at https://13.80.152.17/swagger/index.html
+You can play with the app live at http://countingstrings.centralus.cloudapp.azure.com/
 
 ## Project organization
 
@@ -27,6 +27,7 @@ Background service that wakes up every 30 seconds, checks for new words that hav
 * [Docker](https://www.docker.com/) - Container Engine
 * [AKS](https://azure.microsoft.com/en-us/services/kubernetes-service/) - Azure Kubernetes Service
 * [Helms](https://helm.sh/) - A package manager for Kubernetes
+* [Auth0](https://auth0.com/) - Authentication and Authorization
 * [RabbitMQ](https://www.rabbitmq.com/) - Message Broker
 * [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-2017) - Database Server
 
@@ -34,4 +35,4 @@ Background service that wakes up every 30 seconds, checks for new words that hav
 
 * **Cristian Perez Matturro** 
 
-Check out my linkedin page: https://www.linkedin.com/in/cristianperezmatturro/
+Check out my web page: https://crperez.dev

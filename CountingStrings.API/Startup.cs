@@ -1,15 +1,20 @@
 ﻿using System;
-using System.Threading;
+using System.Linq;
+using System.Security.Claims;
+using CountingStrings.API.Auth;
 using CountingStrings.API.Contract;
 using CountingStrings.API.Data.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 using NServiceBus;
-using Swashbuckle.AspNetCore.Examples;
-using Swashbuckle.AspNetCore.Swagger;
+using NSwag;
+
 
 namespace CountingStrings.API
 {
@@ -24,7 +29,35 @@ namespace CountingStrings.API
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {            
+        {
+            #region Auth
+
+            string domain = $"https://{Configuration["Auth0:Domain"]}/";
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                options.Authority = domain;
+                options.Audience = Configuration["Auth0:ApiIdentifier"];
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    NameClaimType = ClaimTypes.NameIdentifier
+                };
+            });
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("write:sessions", policy =>
+                policy.Requirements.Add(new HasScopeRequirement("write:sessions", domain)));
+            });
+
+            services.AddSingleton<IAuthorizationHandler, HasScopeHandler>();
+
+
+            #endregion
+
             #region Bus
 
             var endpointConfiguration = new EndpointConfiguration("CountingStrings.API");
@@ -44,24 +77,28 @@ namespace CountingStrings.API
 
             #region Swagger
 
-            services.AddSwaggerGen(c =>
+            services.AddOpenApiDocument(document =>
             {
-                c.SwaggerDoc("v1", new Info
+                document.AddSecurity("oauth2", Enumerable.Empty<string>(), new OpenApiSecurityScheme
                 {
-                    Version = "v1",
-                    Title = "CountingStrings",
-                    Description = "Stock Taking App",
-                    TermsOfService = "None",
-                    Contact = new Contact()
+                    Type = OpenApiSecuritySchemeType.OAuth2,
+                    Name = "Authorization",
+                    Description = "Integration to Auth0",
+                    Flow = OpenApiOAuth2Flow.Implicit,
+                    Flows = new OpenApiOAuthFlows
                     {
-                        Name = "Cristian Perez Matturro",
-                        Email = "crperez.informatica@gmail.com",
-                        Url = "https://www.linkedin.com/in/cristianperezmatturro/"
-                    }
-                });
+                        Implicit = new OpenApiOAuthFlow
+                        {
+                            AuthorizationUrl =
+                            $"https://{Configuration["Auth0:Domain"]}/authorize?audience={Configuration["Auth0:ApiIdentifier"]}",
+                            TokenUrl = Configuration["Auth0:ApiIdentifier"]
+                        }
+                    },
+                    In = OpenApiSecurityApiKeyLocation.Header,
 
-                c.OperationFilter<ExamplesOperationFilter>();
+                });
             });
+
 
             #endregion
 
@@ -77,16 +114,28 @@ namespace CountingStrings.API
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
+            app.UseOpenApi(settings =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "CountingStrings v1");
+                settings.PostProcess = (document, request) =>
+                {
+                    document.Info.Version = "v1";
+                    document.Info.Title = "CountingStrings";
+                    document.Info.Description = "A stock-take application";
+                    document.Info.Contact = new OpenApiContact
+                    {
+                        Name = "Cristian Perez Matturro",
+                        Email = "crperez.informatica@gmail.com",
+                        Url = "https://crperez.dev"
+                    };
+                };
             });
+
+            app.UseSwaggerUi3();
 
             app.Use(async (ctx, next) =>
             {
                 Console.WriteLine("A new request has been receivied.");
-                
+
                 var bus = ctx.RequestServices.GetService<IMessageSession>();
                 await bus.Send(new LogRequest
                 {
@@ -96,6 +145,8 @@ namespace CountingStrings.API
 
                 await next();
             });
+
+            app.UseAuthentication();
 
             app.UseMvc();
         }

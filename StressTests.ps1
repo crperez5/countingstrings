@@ -8,7 +8,7 @@ workflow workflow1{
 
 	
     function DoRequest($i,$Uri){
-		$Uri = "https://<ip here>/api/sessions/<session id here>/submit"
+		$Uri = "https://13.80.152.17/api/sessions/d7a3998f-020b-4a40-a6a7-817634318ef4/submit"
 		$data = ConvertTo-Json @('chocolate-protein-shake-100072', 'strawberry-protein-shake-100072', 'vanilla-protein-shake-100074')
 	add-type @"
     using System.Net;
