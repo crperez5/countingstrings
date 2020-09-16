@@ -35,4 +35,4 @@ Background service that wakes up every 30 seconds, checks for new words that hav
 
 * **Cristian Perez Matturro** 
 
-Check out my web page: https://crperez.dev
+Check out my site: https://crperez.dev
